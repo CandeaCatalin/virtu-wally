@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Catalin.Candea\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Catalin.Candea\\.nuget\\packages"
+    ]
+  }
+}

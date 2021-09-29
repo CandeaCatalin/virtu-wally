@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "riGIwtT0HcsoIehv1hgBt3EgDkOAJsbX8TECqnFG5pm4ov9Vqqe+MpjLhmBHmG3qQxf5e3W48bXwPnadgesMMQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\VirtuWally\\backend\\backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Catalin.Candea\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
+    "C:\\Users\\Catalin.Candea\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}

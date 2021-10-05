@@ -1,4 +1,4 @@
-# ViruWally app build and run tutorial
+# VirtuWally app build and run tutorial
 
 Requirements
 

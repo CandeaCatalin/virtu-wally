@@ -1,0 +1,12 @@
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\bin\Debug\net5.0\VirtuWally.Domain.deps.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\bin\Debug\net5.0\VirtuWally.Domain.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\bin\Debug\net5.0\ref\VirtuWally.Domain.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\bin\Debug\net5.0\VirtuWally.Domain.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\VirtuWally.Domain.csproj.AssemblyReference.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\VirtuWally.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\VirtuWally.Domain.AssemblyInfoInputs.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\VirtuWally.Domain.AssemblyInfo.cs
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\VirtuWally.Domain.csproj.CoreCompileInputs.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\VirtuWally.Domain.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\ref\VirtuWally.Domain.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Domain\obj\Debug\net5.0\VirtuWally.Domain.pdb

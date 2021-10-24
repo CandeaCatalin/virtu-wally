@@ -1,0 +1,17 @@
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.deps.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.runtimeconfig.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.runtimeconfig.dev.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\ref\VirtuWally.Data.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Domain.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Domain.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.csproj.AssemblyReference.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.AssemblyInfoInputs.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.AssemblyInfo.cs
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.csproj.CoreCompileInputs.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\ref\VirtuWally.Data.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.genruntimeconfig.cache

@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Data\\VirtuWally.Data.csproj": {}
+  },
+  "projects": {
+    "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Data\\VirtuWally.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Data\\VirtuWally.Data.csproj",
+        "projectName": "VirtuWally.Data",
+        "projectPath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Data\\VirtuWally.Data.csproj",
+        "packagesPath": "C:\\Users\\catalin.candea\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\catalin.candea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj": {
+                "projectPath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
+        "projectName": "VirtuWally.Domain",
+        "projectPath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
+        "packagesPath": "C:\\Users\\catalin.candea\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\catalin.candea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

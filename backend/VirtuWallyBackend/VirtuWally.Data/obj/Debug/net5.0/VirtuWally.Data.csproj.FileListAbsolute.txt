@@ -15,3 +15,4 @@ D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\ref\VirtuWally.Data.dll
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.pdb
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.genruntimeconfig.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.csproj.CopyComplete

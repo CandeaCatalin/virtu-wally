@@ -132,8 +132,8 @@ D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\staticwebassets\VirtuWally.API.StaticWebAssets.xml
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\scopedcss\bundle\VirtuWally.API.styles.css
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.RazorTargetAssemblyInfo.cache
-D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.CopyComplete
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.dll
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\ref\VirtuWally.API.dll
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.pdb
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.genruntimeconfig.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\BCrypt.Net-Next.dll

@@ -21,6 +21,10 @@ namespace VirtuWally.Data
                .Property(u => u.CreatedTime)
                .HasDefaultValueSql("getdate()");
             modelBuilder.Entity<User>(e => { e.HasIndex(e => e.Email).IsUnique(); });
+            modelBuilder.Entity<User>().Property(t => t.FirstName).IsRequired();
+            modelBuilder.Entity<User>().Property(t => t.LastName).IsRequired();
+            modelBuilder.Entity<User>().Property(t => t.Email).IsRequired();
+            modelBuilder.Entity<User>().Property(t => t.HashPassword).IsRequired();
         }
     }
 }

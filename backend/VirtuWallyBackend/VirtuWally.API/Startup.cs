@@ -33,6 +33,7 @@ namespace VirtuWally.API
 
             services.AddDbContext<VirtuWallyContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("VirtuWallyConnection")).EnableSensitiveDataLogging().UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
+
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<JwtService>();
         }

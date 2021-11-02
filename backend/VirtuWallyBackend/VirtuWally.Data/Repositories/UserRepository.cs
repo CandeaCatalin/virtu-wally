@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using VirtuWally.Domain;
 
 namespace VirtuWally.Data
@@ -12,6 +13,25 @@ namespace VirtuWally.Data
         }
         public User Create(User user)
         {
+            if (user.FirstName == null || user.FirstName == "")
+            {
+                throw new FormatException("FirstName is invalid");
+            }
+            if (user.LastName == null || user.LastName == "")
+            {
+                throw new FormatException("LastName is invalid");
+            }
+            if (user.HashPassword == null || user.HashPassword == "")
+            {
+                throw new FormatException("Password is invalid");
+            }
+            if (user.Email == null || user.Email == "" || new System.Net.Mail.MailAddress(user.Email) == null)
+            {
+                throw new FormatException("Email is invalid");
+            }
+
+
+
             _context.Users.Add(user);
             user.Id = _context.SaveChanges();
             return user;

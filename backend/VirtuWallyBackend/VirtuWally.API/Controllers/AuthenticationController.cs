@@ -30,7 +30,23 @@ namespace VirtuWally.API.Controllers
                 Email = dto.Email.ToLower(),
                 ImageUrl = dto.ImageUrl
             };
-            return Created("success", _repository.Create(user));
+            if (dto.Password == null || dto.Password == "")
+            {
+                user.HashPassword = null;
+            }
+            try
+            {
+                User returnedUser = _repository.Create(user);
+                return Created("success", returnedUser);
+            }
+            catch (FormatException e)
+            {
+                return Ok(new { message = e.Message });
+            }
+            catch (Exception)
+            {
+                return Ok(new { message = "Email already exists" });
+            }
         }
         [HttpPost("login")]
         public IActionResult Login(LoginDto dto)

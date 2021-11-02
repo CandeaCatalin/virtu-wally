@@ -1,0 +1,280 @@
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\appsettings.Development.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\appsettings.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.exe
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.deps.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.runtimeconfig.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.runtimeconfig.dev.json
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ref\VirtuWally.API.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Humanizer.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.AttributedModel.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.Convention.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.Hosting.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.Runtime.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.TypedParts.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Data.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Domain.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Data.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Domain.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.AssemblyReference.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.AssemblyInfoInputs.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.AssemblyInfo.cs
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.CoreCompileInputs.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\staticwebassets\VirtuWally.API.StaticWebAssets.Manifest.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\staticwebassets\VirtuWally.API.StaticWebAssets.xml
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\scopedcss\bundle\VirtuWally.API.styles.css
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.RazorTargetAssemblyInfo.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\ref\VirtuWally.API.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.pdb
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.genruntimeconfig.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\BCrypt.Net-Next.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\appsettings.Development.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\appsettings.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.exe
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.deps.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.runtimeconfig.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.runtimeconfig.dev.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ref\VirtuWally.API.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.API.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\BCrypt.Net-Next.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Humanizer.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.AttributedModel.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.Convention.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.Hosting.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.Runtime.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Composition.TypedParts.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Data.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Domain.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Data.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\VirtuWally.Domain.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.AssemblyReference.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.AssemblyInfoInputs.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.AssemblyInfo.cs
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.CoreCompileInputs.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\staticwebassets\VirtuWally.API.StaticWebAssets.Manifest.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\staticwebassets\VirtuWally.API.StaticWebAssets.xml
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\scopedcss\bundle\VirtuWally.API.styles.css
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.RazorTargetAssemblyInfo.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.CopyComplete
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\ref\VirtuWally.API.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.genruntimeconfig.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.CopyComplete

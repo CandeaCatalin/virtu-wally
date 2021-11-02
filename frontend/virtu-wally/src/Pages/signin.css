@@ -1,5 +1,7 @@
 body{
   height: 100vh;
+  background: rgb(84,230,253);
+  background: linear-gradient(180deg, rgba(84,230,253,1) 0%, rgba(104,63,247,1) 100%, rgba(104,63,247,1) 100%);
 }
 .vertical-center{
   horiz-align: center;

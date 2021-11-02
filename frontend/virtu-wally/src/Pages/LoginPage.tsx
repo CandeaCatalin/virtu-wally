@@ -1,6 +1,7 @@
 import { FC, SyntheticEvent, useState } from "react";
 import "./signin.css";
-import Logo from "../logo.svg";
+import LoginLogo from "../Resources/Images/LoginLogo.svg";
+import HeaderLogo from "../Resources/Images/HeaderLogo.svg";
 interface LoginPageProps {
   visible: boolean;
   changePage: any;
@@ -19,7 +20,13 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
         <div className={"vertical-center"}>
           <main className="form-signin">
             <form onSubmit={onSubmit}>
-              <img className="mb-4" src={Logo} alt="" width="72" height="57" />
+              <img
+                className="mb-4 align-items-center"
+                src={LoginLogo}
+                alt=""
+                width="300"
+                height="250"
+              />
               <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
               <div className="form-floating">
@@ -59,7 +66,6 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
               <button className="w-100 btn btn-lg btn-primary" type="submit">
                 Sign in
               </button>
-              <p className="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
             </form>
           </main>
         </div>

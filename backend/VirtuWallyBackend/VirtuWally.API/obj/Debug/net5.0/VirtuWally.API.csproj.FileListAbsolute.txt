@@ -277,3 +277,4 @@ C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0
 C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\ref\VirtuWally.API.dll
 C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.pdb
 C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.genruntimeconfig.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.csproj.CopyComplete

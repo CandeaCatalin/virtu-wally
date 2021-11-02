@@ -1,0 +1,7 @@
+.idea/VirtuWally.iml
+.idea/vcs.xml
+.idea/
+backend/VirtuWallyBackend/.vs/VirtuWallyBackend/DesignTimeBuild/.dtbcache.v2
+backend/VirtuWallyBackend/.vs/VirtuWallyBackend/v16/.suo
+backend/VirtuWallyBackend/TestingApp/obj/Debug/net5.0/TestingApp.csproj.AssemblyReference.cache
+backend/VirtuWallyBackend/VirtuWally.Data/obj/Debug/net5.0/VirtuWally.Data.csproj.AssemblyReference.cache

@@ -5,3 +5,7 @@ backend/VirtuWallyBackend/.vs/VirtuWallyBackend/DesignTimeBuild/.dtbcache.v2
 backend/VirtuWallyBackend/.vs/VirtuWallyBackend/v16/.suo
 backend/VirtuWallyBackend/TestingApp/obj/Debug/net5.0/TestingApp.csproj.AssemblyReference.cache
 backend/VirtuWallyBackend/VirtuWally.Data/obj/Debug/net5.0/VirtuWally.Data.csproj.AssemblyReference.cache
+frontend/node_modules/
+frontend/.expo/packager-info.json
+frontend/.expo/README.md
+frontend/.expo/settings.json

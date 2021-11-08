@@ -49,9 +49,6 @@
   text-decoration: none;
 }
 
-.toolbar-navigation-items a:hover {
-}
-
 .toolbar-navigation-items a:active {
   color: orange;
 }

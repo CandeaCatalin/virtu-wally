@@ -1,5 +1,5 @@
 import { FC, SyntheticEvent, useState } from "react";
-import "./signin.css";
+import "./style.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
 
 interface LoginPageProps {
@@ -30,10 +30,10 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
               src={LoginLogo}
               alt=""
               width="300"
-              height="250"
+              height="200"
             />
             <form onSubmit={onSubmit}>
-              <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+              <h1 className="h3 mb-3 mt-5 fw-normal">Please sign in</h1>
 
               <div className="form-floating mb-3">
                 <input
@@ -61,12 +61,17 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
               </div>
 
               <div className="checkbox mb-3">
-                <div
-                  onClick={() => {
-                    changePage("Register");
-                  }}
-                >
-                  Don't have an account?
+                <div className="row">
+                  <div className="col-8">Don't have an account?</div>
+                  <div
+                    className="col-4"
+                    style={{ color: "blue" }}
+                    onClick={() => {
+                      changePage("Register");
+                    }}
+                  >
+                    Register
+                  </div>
                 </div>
               </div>
               <button className="w-100 btn btn-lg btn-light" type="submit">

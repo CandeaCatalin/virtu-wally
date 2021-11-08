@@ -83,56 +83,6 @@ export const MainPage: FC<MainPageProps> = ({ visible, changePage, user }) => {
       ) : (
         ""
       )}
-      {/*{visible && (*/}
-      {/*  <div>*/}
-      {/*    <div style={{ height: "100%" }}>*/}
-      {/*      <Header drawerClickHandler={leftDrawerToggleClickHandlder} />*/}
-      {/*      {leftDrawerOpen && (*/}
-      {/*        <>*/}
-      {/*          <SideDrawer />*/}
-      {/*          <Backdrop onClick={backdropClickHandler} />*/}
-      {/*        </>*/}
-      {/*      )}*/}
-
-      {/*      <main style={{ marginTop: "63px" }}>*/}
-      {/*        <p> This is the main content</p>*/}
-      {/*      </main>*/}
-      {/*    </div>*/}
-      {/*    <div*/}
-      {/*      style={{*/}
-      {/*        display: "flex",*/}
-      {/*        justifyContent: "center",*/}
-      {/*        alignItems: "center",*/}
-      {/*        height: "100vh",*/}
-      {/*      }}*/}
-      {/*    >*/}
-      {/*      <ul>*/}
-      {/*        <li>*/}
-      {/*          <button*/}
-      {/*            onClick={() => {*/}
-      {/*              changePage("Login");*/}
-      {/*            }}*/}
-      {/*          >*/}
-      {/*            GO TO LOGIN*/}
-      {/*          </button>*/}
-      {/*        </li>*/}
-      {/*        <li>*/}
-      {/*          <div*/}
-      {/*            onClick={() => {*/}
-      {/*              changePage("Register");*/}
-      {/*            }}*/}
-      {/*          >*/}
-      {/*            GO TO Register*/}
-      {/*          </div>*/}
-      {/*        </li>*/}
-      {/*        <li>*/}
-      {/*          <div>Main Page</div>*/}
-      {/*        </li>*/}
-      {/*      </ul>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*)}*/}
-      {/*<div>{user.firstName}</div>*/}
     </>
   );
 };

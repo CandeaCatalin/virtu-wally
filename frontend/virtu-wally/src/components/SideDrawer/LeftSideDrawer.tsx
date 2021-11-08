@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./SideDrawer.css";
+import "./LeftSideDrawer.css";
 
-const sideDrawer = (props) => (
+const LeftSideDrawer = () => (
   <nav className="side-drawer">
     <ul>
       <li>
@@ -15,4 +15,4 @@ const sideDrawer = (props) => (
   </nav>
 );
 
-export default sideDrawer;
+export default LeftSideDrawer;

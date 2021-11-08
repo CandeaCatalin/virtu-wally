@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import React, { Component } from "react";
 
 import Toolbar from "../components/Toolbar/Toolbar";
-import SideDrawer from "../components/SideDrawer/SideDrawer";
+import SideDrawer from "../components/SideDrawer/LeftSideDrawer";
 import Backdrop from "../components/Backdrop/Backdrop";
 
 interface MainPageProps {
@@ -27,7 +27,7 @@ export const MainPage: FC<MainPageProps> = ({ visible, changePage }) => {
             {leftDrawerOpen && (
               <>
                 <SideDrawer />
-                <Backdrop click={backdropClickHandler} />
+                <Backdrop onClick={backdropClickHandler} />
               </>
             )}
 

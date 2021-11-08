@@ -5,8 +5,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 70%;
+  width: 60%;
   max-width: 400px;
+  margin-top: 55px;
   z-index: 200;
 }
 

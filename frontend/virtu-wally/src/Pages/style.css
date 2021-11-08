@@ -9,6 +9,10 @@ body {
     rgba(104, 63, 247, 1) 100%
   );
 }
+
+.main-body {
+  background-color: white;
+}
 .vertical-center {
   /* horiz-align: center; */
   vertical-align: middle;

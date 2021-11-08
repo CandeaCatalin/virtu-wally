@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
-import "./Toolbar.css";
+import "./Header.css";
 interface toolbarProps {
   drawerClickHandler: any;
 }
-const toolbar: FC<toolbarProps> = ({ drawerClickHandler }) => (
+const Header: FC<toolbarProps> = ({ drawerClickHandler }) => (
   <header className="toolbar">
     <nav className="toolbar-navigation">
       <div>
@@ -29,4 +29,4 @@ const toolbar: FC<toolbarProps> = ({ drawerClickHandler }) => (
   </header>
 );
 
-export default toolbar;
+export default Header;

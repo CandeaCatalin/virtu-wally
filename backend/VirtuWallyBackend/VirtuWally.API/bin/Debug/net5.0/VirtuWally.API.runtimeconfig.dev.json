@@ -1,8 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Catalin.Candea\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Catalin.Candea\\.nuget\\packages"
+      "C:\\Users\\catalin.candea\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\catalin.candea\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }

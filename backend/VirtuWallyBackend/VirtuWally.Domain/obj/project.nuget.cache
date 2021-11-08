@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vpk2VIratTbwZ/sSQDktcTG649QXlvLALbirEPyn22qh8R2MMHwfKOidU7BDvOAo20AgZu653uxpqLcH773VvQ==",
+  "dgSpecHash": "0EYJ24/ZekZPHtM56YYg2m9np0jMWXfce3qgPTKR1+NlIsUr/BXuIR65f/PdbRNCXvoWBA8nA8ltjyN2xOrUCA==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
+  "projectFilePath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

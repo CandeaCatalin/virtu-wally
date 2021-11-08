@@ -1,32 +1,26 @@
-import { FC } from "react";
+import {FC, useEffect, useState} from "react";
+import {User} from "../Models/User";
 
 interface MainPageProps {
-  visible: boolean;
-  changePage: any;
+    visible: boolean;
+    user: User;
+    changePage: any;
 }
 
-export const MainPage: FC<MainPageProps> = ({ visible, changePage }) => {
-  return (
-    <>
-      {visible && (
-        <div>
-          <button
-            onClick={() => {
-              changePage("Login");
-            }}
-          >
-            GO TO LOGIN
-          </button>
-          <div
-            onClick={() => {
-              changePage("Register");
-            }}
-          >
-            GO TO Register
-          </div>
-          Main Page
-        </div>
-      )}
-    </>
-  );
+export const MainPage: FC<MainPageProps> = ({visible, changePage,user}) => {
+
+    return (
+        <>
+            {visible && (
+                <>
+                <div>
+                    Id: {user.id}
+                    Name: {user.firstName + " " + user.lastName}
+                    Email: {user.email}
+                </div>
+                <button onClick={()=>console.log(user)}>jet</button>
+                </>
+            )}
+        </>
+    );
 };

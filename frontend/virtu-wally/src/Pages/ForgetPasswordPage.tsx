@@ -20,7 +20,7 @@ export const ForgetPasswordPage: FC<ForgetPasswordPageProps> = ({
       credentials: "include",
       body: JSON.stringify({ email }),
     });
-    changePage("Main");
+    changePage("Login");
   };
   return (
     <>

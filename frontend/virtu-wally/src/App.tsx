@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { LoginPage, MainPage, RegisterPage } from "./Pages";
+import { LoginPage, MainPage, RegisterPage, ForgetPasswordPage } from "./Pages";
 import { User } from "./Models/User";
 
 enum MenuItems {
   Main = "Main",
   Login = "Login",
   Register = "Register",
+  ForgetPassword = "ForgetPassword",
 }
 
 function App() {
@@ -73,6 +74,12 @@ function App() {
           {selectedPage === MenuItems.Register && (
             <RegisterPage
               visible={selectedPage === MenuItems.Register}
+              changePage={changePage}
+            />
+          )}
+          {selectedPage === MenuItems.ForgetPassword && (
+            <ForgetPasswordPage
+              visible={selectedPage === MenuItems.ForgetPassword}
               changePage={changePage}
             />
           )}

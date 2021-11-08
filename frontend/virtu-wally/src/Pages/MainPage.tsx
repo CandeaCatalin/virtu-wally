@@ -41,16 +41,16 @@ export const MainPage: FC<MainPageProps> = ({ visible, changePage, user }) => {
                 </>
               )}
 
-              <main style={{ marginTop: "63px" }}>
+              {/* <main style={{ marginTop: "30px" }}>
                 <p> This is the main content</p>
-              </main>
+              </main> */}
             </div>
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                height: "100vh",
+                height: "90vh",
               }}
             >
               <ul>

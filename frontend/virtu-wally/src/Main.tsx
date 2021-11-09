@@ -1,4 +1,10 @@
-import { ForgetPasswordPage, LoginPage, MainPage, RegisterPage } from "./Pages";
+import {
+  ForgetPasswordPage,
+  LoadingPage,
+  LoginPage,
+  MainPage,
+  RegisterPage,
+} from "./Pages";
 import React, { useContext } from "react";
 import { AppContext } from "./Context/AppContext";
 import { MenuItems } from "./Models/MenuItems";
@@ -8,7 +14,7 @@ export const Main = () => {
   return (
     <div>
       {context.isLoading ? (
-        <div>Loading</div>
+        <LoadingPage />
       ) : (
         <>
           {context.selectedPage === MenuItems.Main && (

@@ -2,24 +2,14 @@ import { FC } from "react";
 
 interface RegisterPageProps {
   visible: boolean;
-  changePage: any;
 }
 
-export const RegisterPage: FC<RegisterPageProps> = ({
-  visible,
-  changePage,
-}) => {
+export const RegisterPage: FC<RegisterPageProps> = ({ visible }) => {
   return (
     <>
       {visible && (
         <div>
-          <button
-            onClick={() => {
-              changePage("Main");
-            }}
-          >
-            GO TO MAIN PAGE
-          </button>
+          <button onClick={() => {}}>GO TO MAIN PAGE</button>
           Register Page
         </div>
       )}

@@ -1,13 +1,14 @@
-import { FC, SyntheticEvent, useState } from "react";
+import { FC, SyntheticEvent, useContext, useState } from "react";
 import "./signin.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
+import { AppContext } from "../Context/AppContext";
 
 interface LoginPageProps {
   visible: boolean;
-  changePage: any;
 }
 
-export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
+export const LoginPage: FC<LoginPageProps> = ({ visible }) => {
+  const context = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const onSubmit = async (e: SyntheticEvent) => {
@@ -18,7 +19,9 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
       credentials: "include",
       body: JSON.stringify({ password, email }),
     });
-    changePage("Main");
+    const content = await response.json();
+    context.setUser(content.user);
+    context.changePage("Main");
   };
   return (
     <>
@@ -63,10 +66,10 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
               <div className="checkbox mb-3">
                 <div
                   onClick={() => {
-                    changePage("Register");
+                    context.changePage("Register");
                   }}
                 >
-                  Don't have an account?
+                  You don't have an account?
                 </div>
               </div>
               <button className="w-100 btn btn-lg btn-light" type="submit">

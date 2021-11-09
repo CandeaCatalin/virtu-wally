@@ -1,10 +1,12 @@
 import React, { FC } from "react";
-import "./DrawerToggleButton.css";
+import "./RightDrawerToggleButton.css";
 
-interface drawerToggleButtonProps {
+interface rightDrawerToggleButtonProps {
   onClick: any;
 }
-const DrawerToggleButton: FC<drawerToggleButtonProps> = ({ onClick }) => (
+const RightDrawerToggleButton: FC<rightDrawerToggleButtonProps> = ({
+  onClick,
+}) => (
   <button className="toggle-button" onClick={onClick}>
     <div className="toggle-button-line" />
     <div className="toggle-button-line" />
@@ -12,4 +14,4 @@ const DrawerToggleButton: FC<drawerToggleButtonProps> = ({ onClick }) => (
   </button>
 );
 
-export default DrawerToggleButton;
+export default RightDrawerToggleButton;

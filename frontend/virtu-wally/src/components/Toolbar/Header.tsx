@@ -1,15 +1,21 @@
 import React, { FC } from "react";
 
-import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
+import LeftDrawerToggleButton from "../LeftSideDrawer/LeftDrawerToggleButton";
+import RightDrawerToggleButton from "../RightSideDrawer/RightDrawerToggleButton";
+
 import "./Header.css";
 interface toolbarProps {
-  drawerClickHandler: any;
+  leftDrawerClickHandler: any;
+  rightDrawerClickHandler: any;
 }
-const Header: FC<toolbarProps> = ({ drawerClickHandler }) => (
+const Header: FC<toolbarProps> = ({
+  leftDrawerClickHandler,
+  rightDrawerClickHandler,
+}) => (
   <header className="toolbar">
     <nav className="toolbar-navigation">
       <div>
-        <DrawerToggleButton onClick={drawerClickHandler} />
+        <LeftDrawerToggleButton onClick={leftDrawerClickHandler} />
       </div>
       <div className="toolbar-logo">
         <a href="/">The Logo </a>
@@ -18,10 +24,8 @@ const Header: FC<toolbarProps> = ({ drawerClickHandler }) => (
       <div className="toolbar-navigation-items">
         <ul>
           <li>
-            <a href="/">Products</a>
-          </li>
-          <li>
-            <a href="/">Users</a>
+            <a href="/">User</a>
+            <RightDrawerToggleButton onClick={rightDrawerClickHandler} />
           </li>
         </ul>
       </div>

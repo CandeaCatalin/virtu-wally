@@ -1,5 +1,5 @@
 import { FC, SyntheticEvent, useContext, useState } from "react";
-import "./signin.css";
+import "./style.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
 import { AppContext } from "../Context/AppContext";
 
@@ -33,49 +33,74 @@ export const LoginPage: FC<LoginPageProps> = ({ visible }) => {
               src={LoginLogo}
               alt=""
               width="300"
-              height="250"
+              height="200"
             />
-            <form onSubmit={onSubmit}>
-              <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+            <div className="box mb-5">
+              <form onSubmit={onSubmit}>
+                <h1 className=" page-title h3 mb-3 fw-normal">
+                  Please sign in
+                </h1>
 
-              <div className="form-floating mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                />
-                <label htmlFor="floatingInput">Email address</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="password"
-                  className="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                />
-                <label htmlFor="floatingPassword">Password</label>
-              </div>
-
-              <div className="checkbox mb-3">
-                <div
-                  onClick={() => {
-                    context.changePage("Register");
-                  }}
-                >
-                  You don't have an account?
+                <div className="form-floating mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                  <label htmlFor="floatingInput">Email address</label>
                 </div>
-              </div>
-              <button className="w-100 btn btn-lg btn-light" type="submit">
-                Sign in
-              </button>
-            </form>
+                <div className="form-floating mb-3">
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="floatingPassword"
+                    placeholder="Password"
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                  />
+                  <label htmlFor="floatingPassword">Password</label>
+                </div>
+                <div className="checkbox mt-3">
+                  <div className="row">
+                    <div
+                      style={{ color: "blue" }}
+                      onClick={() => {
+                        context.changePage("ForgetPassword");
+                      }}
+                    >
+                      Forget password?
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  className="button-login w-100 btn btn-lg mt-3"
+                  type="submit"
+                >
+                  Sign in
+                </button>
+
+                <div className="checkbox mt-3">
+                  <div className="row">
+                    <div className="col-8">Don't have an account?</div>
+                    <div
+                      className="col-4"
+                      style={{ color: "blue" }}
+                      onClick={() => {
+                        context.changePage("Register");
+                      }}
+                    >
+                      Register
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </main>
         </div>
       )}

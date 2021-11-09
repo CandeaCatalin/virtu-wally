@@ -1,25 +1,30 @@
-import { LoginPage, MainPage, RegisterPage } from "./Pages";
+import { ForgetPasswordPage, LoginPage, MainPage, RegisterPage } from "./Pages";
 import React, { useContext } from "react";
 import { AppContext } from "./Context/AppContext";
 import { MenuItems } from "./Models/MenuItems";
 
 export const Main = () => {
-  const appContext = useContext(AppContext);
+  const context = useContext(AppContext);
   return (
     <div>
-      {appContext.isLoading ? (
+      {context.isLoading ? (
         <div>Loading</div>
       ) : (
         <>
-          {appContext.selectedPage === MenuItems.Main && (
-            <MainPage visible={appContext.selectedPage === MenuItems.Main} />
+          {context.selectedPage === MenuItems.Main && (
+            <MainPage visible={context.selectedPage === MenuItems.Main} />
           )}
-          {appContext.selectedPage === MenuItems.Login && (
-            <LoginPage visible={appContext.selectedPage === MenuItems.Login} />
+          {context.selectedPage === MenuItems.Login && (
+            <LoginPage visible={context.selectedPage === MenuItems.Login} />
           )}
-          {appContext.selectedPage === MenuItems.Register && (
+          {context.selectedPage === MenuItems.Register && (
             <RegisterPage
-              visible={appContext.selectedPage === MenuItems.Register}
+              visible={context.selectedPage === MenuItems.Register}
+            />
+          )}
+          {context.selectedPage === MenuItems.ForgetPassword && (
+            <ForgetPasswordPage
+              visible={context.selectedPage === MenuItems.ForgetPassword}
             />
           )}
         </>

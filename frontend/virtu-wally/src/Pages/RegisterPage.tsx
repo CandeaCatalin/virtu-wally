@@ -2,6 +2,8 @@ import { FC, SyntheticEvent, useContext, useState } from "react";
 import "./style.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
 import { AppContext } from "../Context/AppContext";
+import { User } from "../Models/User";
+import { toast } from "react-toastify";
 
 interface RegisterPageProps {
   visible: boolean;
@@ -9,17 +11,115 @@ interface RegisterPageProps {
 
 export const RegisterPage: FC<RegisterPageProps> = ({ visible }) => {
   const context = useContext(AppContext);
-  const [email, setEmail] = useState("");
+  const [user, setUser] = useState<User>({
+    createdTime: new Date(),
+    docs: [],
+    email: "",
+    firstName: "",
+    id: 0,
+    imageUrl: "",
+    lastName: "",
+  });
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const onSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/Authentication/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({ password, email }),
-    });
-    context.changePage("Main");
+    if (validateInputs()) {
+      const response = await fetch("/api/Authentication/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ user, password }),
+      });
+      console.log(await response.json());
+      context.changePage("Main");
+    }
+  };
+  const validateInputs = () => {
+    let returnValue: boolean = true;
+    if (user.firstName.length == 0) {
+      toast.error("First Name is empty!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    }
+    if (user.lastName.length == 0) {
+      toast.error("Last Name is empty!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    }
+    if (user.email.length == 0) {
+      toast.error("Email is empty!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    } else if (!context.validateEmail(user.email)) {
+      toast.error("Invalid Email!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    }
+    if (password.length == 0) {
+      toast.error("Password is empty!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    }
+    if (confirmPassword.length == 0) {
+      toast.error("Confirm Password is empty!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    } else if (confirmPassword !== password) {
+      toast.error("Passwords do not match!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    }
+    return returnValue;
   };
   return (
     <>
@@ -46,7 +146,7 @@ export const RegisterPage: FC<RegisterPageProps> = ({ visible }) => {
                         id="floatingInput"
                         placeholder="First Name"
                         onChange={(e) => {
-                          setEmail(e.target.value);
+                          setUser({ ...user, firstName: e.target.value });
                         }}
                       />
                       <label htmlFor="floatingInput">First Name</label>
@@ -61,7 +161,7 @@ export const RegisterPage: FC<RegisterPageProps> = ({ visible }) => {
                         id="floatingInput"
                         placeholder="Last Name"
                         onChange={(e) => {
-                          setEmail(e.target.value);
+                          setUser({ ...user, lastName: e.target.value });
                         }}
                       />
                       <label htmlFor="floatingInput">Last Name</label>
@@ -75,7 +175,7 @@ export const RegisterPage: FC<RegisterPageProps> = ({ visible }) => {
                     id="floatingInput"
                     placeholder="name@example.com"
                     onChange={(e) => {
-                      setEmail(e.target.value);
+                      setUser({ ...user, email: e.target.value });
                     }}
                   />
                   <label htmlFor="floatingInput">Email address</label>
@@ -100,7 +200,7 @@ export const RegisterPage: FC<RegisterPageProps> = ({ visible }) => {
                     id="floatingPassword"
                     placeholder="Confimr password"
                     onChange={(e) => {
-                      setPassword(e.target.value);
+                      setConfirmPassword(e.target.value);
                     }}
                   />
                   <label htmlFor="floatingPassword">Confirm password</label>

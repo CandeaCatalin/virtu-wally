@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
 import { Main } from "./Main";
 import { AppProvider } from "./Context/AppContext";

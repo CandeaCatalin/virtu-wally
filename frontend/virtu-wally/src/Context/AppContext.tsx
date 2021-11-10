@@ -8,6 +8,7 @@ type AppContextType = {
   setIsLoading: any;
   selectedPage: string;
   changePage: any;
+  validateEmail: any;
 };
 // @ts-ignore
 export const AppContext = createContext<AppContextType>(null);
@@ -56,7 +57,10 @@ export const AppProvider: FC = ({ children }) => {
       changePage("Main");
     }
   }, [user]);
-
+  function validateEmail(email: string) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
   const ctx: AppContextType = {
     user: user,
     setUser: setUser,
@@ -64,6 +68,7 @@ export const AppProvider: FC = ({ children }) => {
     setIsLoading: setIsLoading,
     selectedPage: selectedPage,
     changePage: changePage,
+    validateEmail: validateEmail,
   };
   return <AppContext.Provider value={ctx}>{children}</AppContext.Provider>;
 };

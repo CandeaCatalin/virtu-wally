@@ -9,10 +9,10 @@
   margin-top: 55px;
   z-index: 200;
 
-  background: rgb(151, 5, 255);
+  background: rgb(104, 63, 247);
   background: linear-gradient(
     -45deg,
-    rgba(151, 5, 255, 1) 0%,
+    rgba(104, 63, 247, 1) 0%,
     rgba(29, 205, 233, 0.5) 100%,
     rgba(148, 234, 248, 1) 100%,
     rgba(142, 230, 244, 1) 100%

@@ -27,7 +27,7 @@ export const AppProvider: FC = ({ children }) => {
     email: "",
     firstName: "",
     id: 0,
-    imageUrl: "",
+    imageUrl: new File([""], "empty"),
     lastName: "",
   });
   useEffect(() => {

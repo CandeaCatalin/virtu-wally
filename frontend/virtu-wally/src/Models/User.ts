@@ -4,7 +4,7 @@ export type User = {
     firstName: string;
     lastName: string;
     email: string;
-    imageUrl: string;
+    imageUrl: File | undefined;
     id: number;
     createdTime: Date;
     docs: Doc[];

@@ -1,4 +1,4 @@
-import { createContext, FC, useContext, useEffect, useState } from "react";
+import { createContext, FC, useEffect, useState } from "react";
 import { User } from "../Models/User";
 
 type AppContextType = {
@@ -8,7 +8,6 @@ type AppContextType = {
   setIsLoading: any;
   selectedPage: string;
   changePage: any;
-  validateEmail: any;
 };
 // @ts-ignore
 export const AppContext = createContext<AppContextType>(null);
@@ -27,7 +26,7 @@ export const AppProvider: FC = ({ children }) => {
     email: "",
     firstName: "",
     id: 0,
-    imageUrl: new File([""], "empty"),
+    imageUrl: "",
     lastName: "",
   });
   useEffect(() => {
@@ -57,10 +56,7 @@ export const AppProvider: FC = ({ children }) => {
       changePage("Main");
     }
   }, [user]);
-  function validateEmail(email: string) {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
+
   const ctx: AppContextType = {
     user: user,
     setUser: setUser,
@@ -68,7 +64,6 @@ export const AppProvider: FC = ({ children }) => {
     setIsLoading: setIsLoading,
     selectedPage: selectedPage,
     changePage: changePage,
-    validateEmail: validateEmail,
   };
   return <AppContext.Provider value={ctx}>{children}</AppContext.Provider>;
 };

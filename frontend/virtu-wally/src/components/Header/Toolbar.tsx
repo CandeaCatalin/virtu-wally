@@ -3,12 +3,12 @@ import React, { FC } from "react";
 import LeftDrawerToggleButton from "../LeftSideDrawer/LeftDrawerToggleButton";
 import RightDrawerToggleButton from "../RightSideDrawer/RightDrawerToggleButton";
 
-import "./Header.css";
-interface toolbarProps {
+import "./Toolbar.css";
+interface ToolbarProps {
   leftDrawerClickHandler: any;
   rightDrawerClickHandler: any;
 }
-const Header: FC<toolbarProps> = ({
+const Toolbar: FC<ToolbarProps> = ({
   leftDrawerClickHandler,
   rightDrawerClickHandler,
 }) => (
@@ -33,4 +33,4 @@ const Header: FC<toolbarProps> = ({
   </header>
 );
 
-export default Header;
+export default Toolbar;

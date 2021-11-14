@@ -2,100 +2,30 @@ import { FC, SyntheticEvent, useContext, useState } from "react";
 import "./style.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
 import { AppContext } from "../Context/AppContext";
-import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { APIContext } from "../Context/APIContext";
+import { Toast } from "../components/Toast";
 
 interface LoginPageProps {
   visible: boolean;
 }
 
 export const LoginPage: FC<LoginPageProps> = ({ visible }) => {
-  const context = useContext(AppContext);
+  const appContext = useContext(AppContext);
+  const apiContext = useContext(APIContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const onSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    let isValid = validateInputs();
-    if (isValid) {
-      const response = await fetch("/api/Authentication/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ password, email }),
-      });
-      const content = await response.json();
-      if (content.message !== "Invalid Credentials") {
-        context.setUser(content.user);
-        context.changePage("Main");
-      } else {
-        toast.error("Invalid Credentials!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      }
-    }
+    await apiContext.login(email, password);
   };
 
-  const validateInputs = () => {
-    let returnValue: boolean = true;
-    if (email.length == 0) {
-      toast.error("Email is empty!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      returnValue = false;
-    } else if (!context.validateEmail(email)) {
-      toast.error("Invalid Email!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      returnValue = false;
-    }
-    if (password.length == 0) {
-      toast.error("Password is empty!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      returnValue = false;
-    }
-    return returnValue;
-  };
   return (
     <>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      <Toast />
       {visible && (
         <div className={"vertical-center"}>
-          <main className="form-signin">
+          <main className="form-signIn">
             <img
               className="mb-4 align-items-center"
               src={LoginLogo}
@@ -138,7 +68,7 @@ export const LoginPage: FC<LoginPageProps> = ({ visible }) => {
                     <div
                       style={{ color: "blue" }}
                       onClick={() => {
-                        context.changePage("ForgetPassword");
+                        appContext.changePage("ForgetPassword");
                       }}
                     >
                       Forget password?
@@ -160,7 +90,7 @@ export const LoginPage: FC<LoginPageProps> = ({ visible }) => {
                       className="col-4"
                       style={{ color: "blue" }}
                       onClick={() => {
-                        context.changePage("Register");
+                        appContext.changePage("Register");
                       }}
                     >
                       Register

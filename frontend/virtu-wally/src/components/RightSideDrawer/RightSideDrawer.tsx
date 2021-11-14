@@ -1,30 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./RightSideDrawer.css";
+import { AppContext } from "../../Context/AppContext";
+import { APIContext } from "../../Context/APIContext";
 
-const RightSideDrawer = () => (
-  <nav className="right-side-drawer">
-    <div className="details">
-      <p className="details-name"> FirstName LastName</p>
-      <p className="details-email"> youremail@domain.com</p>
-    </div>
-    <ul>
-      <li>
-        <a className="right-list" href="/">
-          Settings
-        </a>
-      </li>
-      <li>
-        <a className="right-list" href="/">
-          Contact Us
-        </a>
-      </li>
-    </ul>
+const RightSideDrawer = () => {
+  const appContext = useContext(AppContext);
+  const apiContext = useContext(APIContext);
+  return (
+    <nav className="right-side-drawer">
+      <div className="details">
+        <p className="details-name">
+          {appContext.user.firstName + " " + appContext.user.lastName}
+        </p>
+        <p className="details-email"> {appContext.user.email}</p>
+      </div>
+      <ul>
+        <li>
+          <a className="right-list" href="/">
+            Settings
+          </a>
+        </li>
+        <li>
+          <a className="right-list" href="/">
+            Contact Us
+          </a>
+        </li>
+      </ul>
 
-    <a className="button-signout" href="/">
-      Sign Out
-    </a>
-  </nav>
-);
+      <div className="button-signOut" onClick={apiContext.signOut}>
+        Sign Out
+      </div>
+    </nav>
+  );
+};
 
 export default RightSideDrawer;

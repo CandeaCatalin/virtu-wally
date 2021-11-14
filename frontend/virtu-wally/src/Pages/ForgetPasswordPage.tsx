@@ -26,7 +26,7 @@ export const ForgetPasswordPage: FC<ForgetPasswordPageProps> = ({
     <>
       {visible && (
         <div className="vertical-center mb-5">
-          <main className="form-signin">
+          <main className="form-signIn">
             <img
               className="mb-4 align-items-center"
               src={LoginLogo}

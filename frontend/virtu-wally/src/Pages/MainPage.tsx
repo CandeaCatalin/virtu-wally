@@ -67,7 +67,7 @@ export const MainPage: FC<MainPageProps> = ({ visible, changePage, user }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                height: "90vh",
+                height: "100vh",
               }}
             >
               <ul>

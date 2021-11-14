@@ -1,43 +1,65 @@
 .side-drawer {
-  height: 100%;
-  /* box-shadow: 2px 0px 5px rgba(0, 0, 0, 0); */
+  height: 93%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 50%;
   max-width: 400px;
   margin-top: 55px;
   z-index: 200;
 
-  background: rgb(151, 5, 255);
+  background: rgb(104, 63, 247);
   background: linear-gradient(
     -45deg,
-    rgba(151, 5, 255, 1) 0%,
-    rgba(29, 205, 233, 0.5) 100%,
-    rgba(148, 234, 248, 1) 100%,
-    rgba(142, 230, 244, 1) 100%
+    rgba(104, 63, 247, 1) 0%,
+    rgba(84, 230, 253, 1) 100%
   );
 }
 
-.side-drawer ul {
+.categories-header {
   height: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-.side-drawer li {
-  margin: 0.5rem 0;
-}
-
-.side-drawer a {
-  color: purple;
-  text-decoration: none;
+.categories {
+  margin: 1.5rem 1rem;
+  color: white;
   font-size: 1.2rem;
 }
 
-.side-drawer a:hover,
-.side-drawer a:active {
-  color: #fa923f;
+.side-drawer li {
+  margin: 1.5rem 0rem;
+  list-style-type: none;
+}
+
+.side-drawer a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.button-categories {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 10px;
+  outline: none;
+
+  background-image: linear-gradient(
+    rgb(148, 234, 248),
+    rgb(255, 255, 255),
+    rgb(148, 234, 248)
+  );
+}
+
+.button-help {
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
 }

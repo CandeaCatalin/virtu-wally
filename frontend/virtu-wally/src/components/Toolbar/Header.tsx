@@ -24,7 +24,7 @@ const Header: FC<toolbarProps> = ({
       <div className="toolbar-navigation-items">
         <ul>
           <li>
-            <a href="/">User</a>
+            {/* <a href="/">User</a> */}
             <RightDrawerToggleButton onClick={rightDrawerClickHandler} />
           </li>
         </ul>

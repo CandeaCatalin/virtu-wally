@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useContext, useState } from "react";
 import React, { Component } from "react";
 
 import LeftSideDrawer from "../components/LeftSideDrawer/LeftSideDrawer";
@@ -6,13 +6,14 @@ import RightSideDrawer from "../components/RightSideDrawer/RightSideDrawer";
 import Backdrop from "../components/Backdrop/Backdrop";
 import { User } from "../Models/User";
 import Header from "../components/Toolbar/Header";
+import { AppContext } from "../Context/AppContext";
 
 interface MainPageProps {
   visible: boolean;
-  user: User;
-  changePage: any;
 }
-export const MainPage: FC<MainPageProps> = ({ visible, changePage, user }) => {
+
+export const MainPage: FC<MainPageProps> = ({ visible }) => {
+  const context = useContext(AppContext);
   const [leftDrawerOpen, setLeftDrawerOpen] = useState(false);
   const [rightDrawerOpen, setRightDrawerOpen] = useState(false);
   const leftDrawerToggleClickHandlder = () => {
@@ -33,7 +34,7 @@ export const MainPage: FC<MainPageProps> = ({ visible, changePage, user }) => {
       headers: { "Content-Type": "application/json" },
       credentials: "include",
     });
-    changePage("Login");
+    context.changePage("Login");
   };
   return (
     <>
@@ -72,19 +73,13 @@ export const MainPage: FC<MainPageProps> = ({ visible, changePage, user }) => {
             >
               <ul>
                 <li>
-                  <button
-                    onClick={() => {
-                      changePage("Login");
-                    }}
-                  >
-                    GO TO LOGIN
-                  </button>
+                  <button onClick={() => {}}>GO TO LOGIN</button>
                   <button onClick={logOut}>LOGOUT</button>
                 </li>
                 <li>
                   <div
                     onClick={() => {
-                      changePage("Register");
+                      context.changePage("Register");
                     }}
                   >
                     GO TO Register

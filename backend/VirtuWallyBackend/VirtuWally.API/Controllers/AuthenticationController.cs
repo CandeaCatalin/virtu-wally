@@ -65,7 +65,7 @@ namespace VirtuWally.API.Controllers
             {
                 HttpOnly = true
             });
-            return Ok(new { message = "success" });
+            return Ok(new { message = "success",user = user });
         }
         [HttpGet("user")]
         public IActionResult GetUser()

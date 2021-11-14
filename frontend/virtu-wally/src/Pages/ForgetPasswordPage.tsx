@@ -1,16 +1,16 @@
-import { FC, SyntheticEvent, useState } from "react";
+import { FC, SyntheticEvent, useContext, useState } from "react";
 import "./style.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
+import { AppContext } from "../Context/AppContext";
 
 interface ForgetPasswordPageProps {
   visible: boolean;
-  changePage: any;
 }
 
 export const ForgetPasswordPage: FC<ForgetPasswordPageProps> = ({
   visible,
-  changePage,
 }) => {
+  const context = useContext(AppContext);
   const [email, setEmail] = useState("");
   const onSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ export const ForgetPasswordPage: FC<ForgetPasswordPageProps> = ({
       credentials: "include",
       body: JSON.stringify({ email }),
     });
-    changePage("Login");
+    context.changePage("Login");
   };
   return (
     <>
@@ -65,7 +65,7 @@ export const ForgetPasswordPage: FC<ForgetPasswordPageProps> = ({
                     <div
                       style={{ color: "blue" }}
                       onClick={() => {
-                        changePage("Login");
+                        context.changePage("Login");
                       }}
                     >
                       Back to Sign In

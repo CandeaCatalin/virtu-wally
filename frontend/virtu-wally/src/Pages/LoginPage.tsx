@@ -1,27 +1,98 @@
-import { FC, SyntheticEvent, useState } from "react";
+import { FC, SyntheticEvent, useContext, useState } from "react";
 import "./style.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
+import { AppContext } from "../Context/AppContext";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface LoginPageProps {
   visible: boolean;
-  changePage: any;
 }
 
-export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
+export const LoginPage: FC<LoginPageProps> = ({ visible }) => {
+  const context = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const onSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/Authentication/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({ password, email }),
-    });
-    changePage("Main");
+    let isValid = validateInputs();
+    if (isValid) {
+      const response = await fetch("/api/Authentication/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ password, email }),
+      });
+      const content = await response.json();
+      if (content.message !== "Invalid Credentials") {
+        context.setUser(content.user);
+        context.changePage("Main");
+      } else {
+        toast.error("Invalid Credentials!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    }
+  };
+
+  const validateInputs = () => {
+    let returnValue: boolean = true;
+    if (email.length == 0) {
+      toast.error("Email is empty!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    } else if (!context.validateEmail(email)) {
+      toast.error("Invalid Email!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    }
+    if (password.length == 0) {
+      toast.error("Password is empty!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      returnValue = false;
+    }
+    return returnValue;
   };
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {visible && (
         <div className={"vertical-center"}>
           <main className="form-signin">
@@ -40,7 +111,7 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
 
                 <div className="form-floating mb-3">
                   <input
-                    type="email"
+                    type="text"
                     className="form-control"
                     id="floatingInput"
                     placeholder="name@example.com"
@@ -67,7 +138,7 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
                     <div
                       style={{ color: "blue" }}
                       onClick={() => {
-                        changePage("ForgetPassword");
+                        context.changePage("ForgetPassword");
                       }}
                     >
                       Forget password?
@@ -89,7 +160,7 @@ export const LoginPage: FC<LoginPageProps> = ({ visible, changePage }) => {
                       className="col-4"
                       style={{ color: "blue" }}
                       onClick={() => {
-                        changePage("Register");
+                        context.changePage("Register");
                       }}
                     >
                       Register

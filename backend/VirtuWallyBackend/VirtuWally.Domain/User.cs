@@ -14,6 +14,7 @@ namespace VirtuWally.Domain
         public string Email { get; set; }
         public string ImageUrl { get; set; }
         public List<Doc> Docs { get; set; } = new List<Doc>();
+        public List<Category> Categories { get; set; } = new List<Category>();
         public DateTime CreatedTime { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace VirtuWally.API.Controllers
                 LastName = dto.LastName,
                 HashPassword = BCrypt.Net.BCrypt.HashPassword(dto.Password),
                 Email = dto.Email.ToLower(),
-                ImageUrl = dto.ImageUrl
+                ImageUrl = ""
             };
             if (dto.Password == null || dto.Password == "")
             {
@@ -36,7 +36,13 @@ namespace VirtuWally.API.Controllers
             }
             try
             {
+         
                 User returnedUser = _repository.Create(user);
+                string jwt = _jwtService.Generate(returnedUser.Id);
+                Response.Cookies.Append("jwt", jwt, new CookieOptions
+                {
+                    HttpOnly = true
+                });
                 return Created("success", returnedUser);
             }
             catch (FormatException e)
@@ -65,7 +71,7 @@ namespace VirtuWally.API.Controllers
             {
                 HttpOnly = true
             });
-            return Ok(new { message = "success",user = user });
+            return Ok(new { message = "success", user = user });
         }
         [HttpGet("user")]
         public IActionResult GetUser()
@@ -88,7 +94,7 @@ namespace VirtuWally.API.Controllers
         public IActionResult Logout()
         {
             Response.Cookies.Delete("jwt");
-            return Ok(new { message = "success" });
+            return Ok(new { message = "Logout Successful" });
         }
     }
 }

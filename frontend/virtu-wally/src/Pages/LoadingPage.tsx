@@ -1,9 +1,8 @@
 import LoadingImage from "../Resources/Images/Loading.svg";
-import LoginLogo from "../Resources/Images/LoginLogo.svg";
 export const LoadingPage = () => {
   return (
     <div className={"vertical-center"}>
-      <main className="form-signin ">
+      <main className="form-signIn ">
         <img
           className="mb-4 align-items-center"
           src={LoadingImage}

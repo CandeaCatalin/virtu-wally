@@ -18,3 +18,8 @@
   height: 2px;
   background: white;
 }
+
+.align-items-center {
+  /* background: white; */
+  color: white;
+}

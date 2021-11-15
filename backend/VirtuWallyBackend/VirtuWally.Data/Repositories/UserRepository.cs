@@ -33,8 +33,9 @@ namespace VirtuWally.Data
 
 
             _context.Users.Add(user);
-            user.Id = _context.SaveChanges();
-            return user;
+            _context.SaveChanges();
+            
+            return GetByEmail(user.Email);
         }
 
         public User GetByEmail(string email)
@@ -46,5 +47,22 @@ namespace VirtuWally.Data
         {
             return _context.Users.Find(id);
         }
+        bool IsValidEmail(string email)
+        {
+            if (email.Trim().EndsWith("."))
+            {
+                return false; // suggested by @TK-421
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
+
 }

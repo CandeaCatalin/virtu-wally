@@ -28,10 +28,11 @@ export const AppProvider: FC = ({ children }) => {
     id: 0,
     imageUrl: "",
     lastName: "",
+    categories: [],
   });
   useEffect(() => {
     (async () => {
-      const response = await fetch("/api/Authentication/user", {
+      const response = await fetch("/api/User", {
         headers: { "Content-Type": "application/json" },
       });
       const content = await response.json();

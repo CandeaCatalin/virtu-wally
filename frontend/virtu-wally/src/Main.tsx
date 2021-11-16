@@ -5,12 +5,15 @@ import {
   MainPage,
   RegisterPage,
 } from "./Pages";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AppContext } from "./Context/AppContext";
 import { MenuItems } from "./Models/MenuItems";
+import { Modals } from "./components/Modals";
 
 export const Main = () => {
   const context = useContext(AppContext);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [deletedCategoryId, setDeletedCategoryId] = useState(0);
   return (
     <div>
       {context.isLoading ? (

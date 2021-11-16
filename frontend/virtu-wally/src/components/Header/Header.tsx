@@ -3,6 +3,7 @@ import Toolbar from "./Toolbar";
 import LeftSideDrawer from "../LeftSideDrawer/LeftSideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
 import RightSideDrawer from "../RightSideDrawer/RightSideDrawer";
+import { DeleteModal } from "../LeftSideDrawer/Category/DeleteModal";
 
 interface HeaderProps {}
 
@@ -21,6 +22,7 @@ export const Header: FC<HeaderProps> = () => {
   const rightBackdropClickHandler = () => {
     setRightDrawerOpen(false);
   };
+
   return (
     <>
       <div style={{ height: "100%" }}>

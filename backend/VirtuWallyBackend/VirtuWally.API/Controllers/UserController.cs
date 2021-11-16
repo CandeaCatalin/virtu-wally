@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VirtuWally.API.Services;
@@ -23,36 +24,39 @@ namespace VirtuWally.API.Controllers
         [HttpGet("")]
         public IActionResult GetUser()
         {
-            try
-            {
-                string jwt = Request.Cookies["jwt"];
-                System.IdentityModel.Tokens.Jwt.JwtSecurityToken token = _jwtService.Verify(jwt);
-
-                int userId = int.Parse(token.Issuer);
-                User user = _repository.GetById(userId);
-                return Ok(user);
-            }
-            catch (Exception)
+            User user = _jwtService.CheckIfUserIsLogged(_repository, Request);
+            if (user == null)
             {
                 return Unauthorized();
             }
+            else
+                return Ok(user);
         }
 
-        [HttpGet("UploadImage")]
+        [HttpPost("UploadImage")]
         public IActionResult UploadImage(IFormFile file)
         {
-            try
-            {
-                string jwt = Request.Cookies["jwt"];
-                System.IdentityModel.Tokens.Jwt.JwtSecurityToken token = _jwtService.Verify(jwt);
-
-                int userId = int.Parse(token.Issuer);
-                User user = _repository.GetById(userId);
-                return Ok(user);
-            }
-            catch (Exception)
+            User user = _jwtService.CheckIfUserIsLogged(_repository, Request);
+            if (user == null)
             {
                 return Unauthorized();
+            }
+            else
+            {
+                if (file != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    file.CopyTo(ms);
+                    user.ImageUrl = ms.ToArray();
+
+                    _repository.Update(user);
+                }
+                else
+                {
+                    return BadRequest(new {message = "no file"});
+                }
+
+                return Ok(user);
             }
         }
     }

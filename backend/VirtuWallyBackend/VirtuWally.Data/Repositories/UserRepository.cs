@@ -56,6 +56,13 @@ namespace VirtuWally.Data
             ;
         }
 
+        public User Update(User user)
+        {
+            _context.Users.Update(user);
+            _context.SaveChanges();
+            return user;
+        }
+
         bool IsValidEmail(string email)
         {
             if (email.Trim().EndsWith("."))

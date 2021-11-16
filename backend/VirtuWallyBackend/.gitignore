@@ -383,7 +383,8 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-
+bin
+obj
 VirtuWally.Domain/bin
 VirtuWally.Data/bin
 VirtuWally.API/bin

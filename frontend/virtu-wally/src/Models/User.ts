@@ -1,4 +1,5 @@
 import { Doc } from "./Doc";
+import { Category } from "./Category";
 
 export type User = {
   firstName: string;
@@ -8,4 +9,5 @@ export type User = {
   id: number;
   createdTime: Date;
   docs: Doc[];
+  categories: Category[];
 };

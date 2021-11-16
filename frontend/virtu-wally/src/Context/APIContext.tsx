@@ -77,11 +77,6 @@ export const APIProvider: FC = ({ children }) => {
     }
   };
 
-  // function validateEmail(email: string) {
-  //   const re = /\S+@\S+\.\S+/;
-  //   return re.test(email);
-  // }
-
   const signOut = async () => {
     await fetch("/api/Authentication/logout", {
       method: "POST",

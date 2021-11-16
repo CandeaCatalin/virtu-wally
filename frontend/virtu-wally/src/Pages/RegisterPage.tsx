@@ -21,6 +21,7 @@ export const RegisterPage: FC<RegisterPageProps> = ({ visible }) => {
     id: 0,
     imageUrl: "",
     lastName: "",
+    categories: [],
   });
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

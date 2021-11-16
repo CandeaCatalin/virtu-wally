@@ -42,7 +42,7 @@
 }
 
 .button-categories {
-  width: 100%;
+  width: 90%;
   text-align: center;
   display: inline-block;
   padding: 4px;
@@ -63,4 +63,8 @@
   position: absolute;
   bottom: 2rem;
   left: 3rem;
+}
+.category-element{
+  display:flex;
+  flex-wrap: nowrap;
 }

@@ -2,13 +2,14 @@ import { FC, useContext } from "react";
 import React from "react";
 import { AppContext } from "../Context/AppContext";
 import { Header } from "../components/Header/Header";
+import { Modals } from "../components/Modals";
 
 interface MainPageProps {
   visible: boolean;
 }
 
 export const MainPage: FC<MainPageProps> = ({ visible }) => {
-  const context = useContext(AppContext);
+  const appContext = useContext(AppContext);
 
   return (
     <>
@@ -16,6 +17,9 @@ export const MainPage: FC<MainPageProps> = ({ visible }) => {
         <>
           <Header />
           <div className="main-body">
+            <div style={{ zIndex: 500, position: "absolute", width: "100vw" }}>
+              <Modals />
+            </div>
             <div
               style={{
                 display: "flex",
@@ -24,6 +28,10 @@ export const MainPage: FC<MainPageProps> = ({ visible }) => {
                 height: "100vh",
               }}
             >
+              <img
+                height={100}
+                src={"data:image/png;base64," + appContext.user.imageUrl}
+              />
               <ul>
                 <li>
                   <button onClick={() => {}}>GO TO LOGIN</button>
@@ -31,7 +39,7 @@ export const MainPage: FC<MainPageProps> = ({ visible }) => {
                 <li>
                   <div
                     onClick={() => {
-                      context.changePage("Register");
+                      appContext.changePage("Register");
                     }}
                   >
                     GO TO Register

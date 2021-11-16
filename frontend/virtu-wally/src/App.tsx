@@ -3,12 +3,15 @@ import "./App.css";
 import { Main } from "./Main";
 import { AppProvider } from "./Context/AppContext";
 import { APIProvider } from "./Context/APIContext";
+import { ModalsProvider } from "./Context/ModalsContext";
 
 function App() {
   return (
     <AppProvider>
       <APIProvider>
-        <Main />
+        <ModalsProvider>
+          <Main />
+        </ModalsProvider>
       </APIProvider>
     </AppProvider>
   );

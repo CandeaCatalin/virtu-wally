@@ -2,6 +2,9 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using Microsoft.AspNetCore.Http;
+using VirtuWally.Data;
+using VirtuWally.Domain;
 
 namespace VirtuWally.API.Services
 {
@@ -31,6 +34,23 @@ namespace VirtuWally.API.Services
                                         },
                                         out SecurityToken validatedToken);
             return (JwtSecurityToken)validatedToken;
+        }
+
+        public User CheckIfUserIsLogged(IUserRepository repository, HttpRequest request)
+        {
+            try
+            {
+                string jwt = request.Cookies["jwt"];
+                JwtSecurityToken token = Verify(jwt);
+
+                int userId = int.Parse(token.Issuer);
+                User user = repository.GetById(userId);
+                return user;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

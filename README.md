@@ -4,7 +4,7 @@
 
 Requirements
 
-1. Node js verision >= 12
+1. Node js version >= 12
 2. Android studio
 3. Text editor
 

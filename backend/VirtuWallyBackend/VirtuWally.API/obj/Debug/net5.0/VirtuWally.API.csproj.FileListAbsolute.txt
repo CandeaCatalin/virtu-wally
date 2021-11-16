@@ -277,3 +277,7 @@ C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0
 C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\ref\VirtuWally.API.dll
 C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.pdb
 C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\obj\Debug\net5.0\VirtuWally.API.genruntimeconfig.cache
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.IO.Pipelines.dll
+D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

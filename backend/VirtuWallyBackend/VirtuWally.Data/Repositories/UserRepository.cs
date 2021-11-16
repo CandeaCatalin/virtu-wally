@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using VirtuWally.Domain;
 
 namespace VirtuWally.Data
@@ -7,52 +8,61 @@ namespace VirtuWally.Data
     public class UserRepository : IUserRepository
     {
         private readonly VirtuWallyContext _context;
+
         public UserRepository(VirtuWallyContext context)
         {
             _context = context;
         }
+
         public User Create(User user)
         {
-            if (user.FirstName == null || user.FirstName == "")
+            if (string.IsNullOrEmpty(user.FirstName))
             {
                 throw new FormatException("FirstName is invalid");
             }
-            if (user.LastName == null || user.LastName == "")
+
+            if (string.IsNullOrEmpty(user.LastName))
             {
                 throw new FormatException("LastName is invalid");
             }
-            if (user.HashPassword == null || user.HashPassword == "")
+
+            if (string.IsNullOrEmpty(user.HashPassword))
             {
                 throw new FormatException("Password is invalid");
             }
-            if (user.Email == null || user.Email == "" || new System.Net.Mail.MailAddress(user.Email) == null)
+
+            if (string.IsNullOrEmpty(user.Email) || new System.Net.Mail.MailAddress(user.Email) == null)
             {
                 throw new FormatException("Email is invalid");
             }
 
 
-
             _context.Users.Add(user);
             _context.SaveChanges();
-            
+
             return GetByEmail(user.Email);
         }
 
         public User GetByEmail(string email)
         {
-            return _context.Users.FirstOrDefault(u => u.Email == email.ToLower());
+            return _context.Users.Include(u => u.Docs).Include(u => u.Categories)
+                .FirstOrDefault(u => u.Email == email.ToLower());
         }
 
         public User GetById(int id)
         {
-            return _context.Users.Find(id);
+            return _context.Users.Include(u => u.Docs).Include(u => u.Categories)
+                .FirstOrDefault(u => u.Id == id);
+            ;
         }
+
         bool IsValidEmail(string email)
         {
             if (email.Trim().EndsWith("."))
             {
                 return false; // suggested by @TK-421
             }
+
             try
             {
                 var addr = new System.Net.Mail.MailAddress(email);
@@ -64,5 +74,4 @@ namespace VirtuWally.Data
             }
         }
     }
-
 }

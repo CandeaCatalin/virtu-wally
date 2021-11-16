@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Vpk2VIratTbwZ/sSQDktcTG649QXlvLALbirEPyn22qh8R2MMHwfKOidU7BDvOAo20AgZu653uxpqLcH773VvQ==",
+  "dgSpecHash": "S4SkEDkFiLViunWV/33M4wPRoEsN0ziUQG6nskoKY1DXchdu41bm9GlFpSoQsqqSq+SsHRaL09EzGiBs7SEn8A==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\catalin.candea\\.nuget\\packages\\microsoft.aspnetcore.http.features\\6.0.0-preview.4.21253.5\\microsoft.aspnetcore.http.features.6.0.0-preview.4.21253.5.nupkg.sha512",
+    "C:\\Users\\catalin.candea\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0-preview.4.21253.7\\microsoft.extensions.primitives.6.0.0-preview.4.21253.7.nupkg.sha512",
+    "C:\\Users\\catalin.candea\\.nuget\\packages\\system.io.pipelines\\6.0.0-preview.4.21253.7\\system.io.pipelines.6.0.0-preview.4.21253.7.nupkg.sha512",
+    "C:\\Users\\catalin.candea\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-preview.4.21253.7\\system.runtime.compilerservices.unsafe.6.0.0-preview.4.21253.7.nupkg.sha512"
+  ],
   "logs": []
 }

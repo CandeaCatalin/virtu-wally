@@ -383,6 +383,10 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+
+VirtuWally.Domain/bin
+VirtuWally.Data/bin
+VirtuWally.API/bin
 # JetBrains Rider
 .idea/
 *.sln.iml

@@ -30,7 +30,7 @@ namespace VirtuWally.API.Controllers
                 Email = dto.Email.ToLower(),
                 ImageUrl = ""
             };
-            if (dto.Password == null || dto.Password == "")
+            if (string.IsNullOrEmpty(dto.Password))
             {
                 user.HashPassword = null;
             }

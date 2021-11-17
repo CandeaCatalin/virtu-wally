@@ -1,120 +1,143 @@
 body {
-  height: 100vh;
-  width: 100%;
-  background: rgb(84, 230, 253);
-  background: linear-gradient(
-    180deg,
-    rgba(84, 230, 253, 1) 0%,
-    rgba(104, 63, 247, 1) 100%,
-    rgba(104, 63, 247, 1) 100%
-  );
+    height: 100vh;
+    width: 100%;
+    background: rgb(84, 230, 253);
+    background: linear-gradient(
+            180deg,
+            rgba(84, 230, 253, 1) 0%,
+            rgba(104, 63, 247, 1) 100%,
+            rgba(104, 63, 247, 1) 100%
+    );
 }
 
 .main-body {
-  background-color: white;
+    background-color: white;
 }
+
 .vertical-center {
-  /* horiz-align: center; */
-  vertical-align: middle;
+    /* horiz-align: center; */
+    vertical-align: middle;
 }
+
 .form-signIn {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
 }
 
 .form-signIn .checkbox {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .form-signIn .form-floating:focus-within {
-  z-index: 2;
+    z-index: 2;
 }
 
 .form-signIn input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .form-signIn input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .form-register {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
 }
 
 .form-register .checkbox {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .form-register .form-floating:focus-within {
-  z-index: 2;
+    z-index: 2;
 }
+
 .form-register input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .form-register input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .button-register {
-  border-radius: 20px;
-  background: linear-gradient(
-    180deg,
-    rgba(29, 205, 233, 1) 5%,
-    rgba(104, 63, 247, 1) 100%,
-    rgba(104, 63, 247, 1) 100%
-  );
-  border-color: none;
+    border-radius: 20px;
+    background: linear-gradient(
+            180deg,
+            rgba(29, 205, 233, 1) 5%,
+            rgba(104, 63, 247, 1) 100%,
+            rgba(104, 63, 247, 1) 100%
+    );
+    border-color: none;
 }
 
 .button-login {
-  border-radius: 20px;
-  background: linear-gradient(
-    180deg,
-    rgba(29, 205, 233, 1) 5%,
-    rgba(104, 63, 247, 1) 100%,
-    rgba(104, 63, 247, 1) 100%
-  );
+    border-radius: 20px;
+    background: linear-gradient(
+            180deg,
+            rgba(29, 205, 233, 1) 5%,
+            rgba(104, 63, 247, 1) 100%,
+            rgba(104, 63, 247, 1) 100%
+    );
 
-  border-color: none;
+    border-color: none;
 }
 
 .button-reset-password {
-  border-radius: 20px;
-  background: linear-gradient(
-    180deg,
-    rgba(29, 205, 233, 1) 5%,
-    rgba(104, 63, 247, 1) 100%,
-    rgba(104, 63, 247, 1) 100%
-  );
+    border-radius: 20px;
+    background: linear-gradient(
+            180deg,
+            rgba(29, 205, 233, 1) 5%,
+            rgba(104, 63, 247, 1) 100%,
+            rgba(104, 63, 247, 1) 100%
+    );
 
-  border-color: none;
+    border-color: none;
+}
+
+.button-modal-prim {
+    border-radius: 20px;
+    background: linear-gradient(
+            180deg,
+            rgba(29, 205, 233, 1) 5%,
+            rgba(104, 63, 247, 1) 100%,
+            rgba(104, 63, 247, 1) 100%
+    );
+
+    border-color: none;
+}
+
+.button-modal-sec {
+    border-radius: 20px;
+    background: gray;
+
+
+    border-color: none;
 }
 
 .box {
-  /* background-color: white; */
-  background-color: rgba(255, 255, 255, 0.6);
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
-  border-radius: 20px;
+    /* background-color: white; */
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
 }
 
 .page-title {
-  text-align: center;
+    text-align: center;
 }

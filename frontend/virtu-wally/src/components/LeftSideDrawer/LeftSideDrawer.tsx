@@ -1,5 +1,5 @@
 import React, { FC, useContext } from "react";
-
+import questionMark from "../../Resources/Images/question_mark.svg";
 import "./LeftSideDrawer.css";
 import { AppContext } from "../../Context/AppContext";
 import { CategoryElement } from "./Category/CategoryElement";
@@ -35,10 +35,15 @@ const LeftSideDrawer: FC<LeftSideDrawerProps> = ({}) => {
           />
         ))}
       </ul>
-
-      <a className="button-help" href="/">
-        Help
-      </a>
+      <div className={"button-help"}>
+        <img
+          src={questionMark}
+          alt={"questionMark"}
+          style={{ paddingRight: "5px" }}
+          height={"20px"}
+        />
+        <div>Help</div>
+      </div>
     </nav>
   );
 };

@@ -34,11 +34,8 @@ export const AddCategoryModal: FC<AddCategoryModalProps> = ({ onClose }) => {
       aria-hidden="true"
       style={{ position: "relative", top: "20vh" }}
     >
-      <div
-        className="modal-dialog"
-        style={{ background: "rgba(0, 0 ,0, 0.3)" }}
-      >
-        <div className="modal-content">
+      <div className="modal-dialog">
+        <div className="modal-content" style={{ borderRadius: "10px" }}>
           <div className="modal-header">
             <h5 className="modal-title" id="deleteModalLabel">
               Add a new Category
@@ -70,7 +67,7 @@ export const AddCategoryModal: FC<AddCategoryModalProps> = ({ onClose }) => {
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-secondary"
+              className="btn button-modal-sec"
               data-bs-dismiss="modal"
               onClick={onClose}
             >
@@ -78,7 +75,7 @@ export const AddCategoryModal: FC<AddCategoryModalProps> = ({ onClose }) => {
             </button>
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn button-modal-prim"
               onClick={onSubmit}
             >
               Add

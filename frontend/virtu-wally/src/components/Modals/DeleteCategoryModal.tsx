@@ -38,11 +38,8 @@ export const DeleteCategoryModal: FC<DeleteCategoryModalProps> = ({
       aria-hidden="true"
       style={{ position: "relative", top: "20vh" }}
     >
-      <div
-        className="modal-dialog"
-        style={{ background: "rgba(0, 0 ,0, 0.3)" }}
-      >
-        <div className="modal-content">
+      <div className="modal-dialog">
+        <div className="modal-content" style={{ borderRadius: "10px" }}>
           <div className="modal-header">
             <h5 className="modal-title" id="deleteModalLabel">
               Confirm Deletion
@@ -61,7 +58,7 @@ export const DeleteCategoryModal: FC<DeleteCategoryModalProps> = ({
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-secondary"
+              className="btn button-modal-sec"
               data-bs-dismiss="modal"
               onClick={onClose}
             >
@@ -69,7 +66,7 @@ export const DeleteCategoryModal: FC<DeleteCategoryModalProps> = ({
             </button>
             <button
               type="button"
-              className="btn btn-primary"
+              className="button-modal-prim  btn"
               onClick={onDelete}
             >
               Delete

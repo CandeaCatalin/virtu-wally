@@ -15,5 +15,11 @@ namespace VirtuWally.Data
             _context.Categories.Remove(category);
             _context.SaveChanges();
         }
+
+        public void Add(Category category)
+        {
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+        }
     }
 }

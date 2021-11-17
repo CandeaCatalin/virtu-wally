@@ -1,13 +1,16 @@
 import { FC, useContext } from "react";
-import { AppContext } from "../../../Context/AppContext";
-import { ModalsContext } from "../../../Context/ModalsContext";
+import { AppContext } from "../../Context/AppContext";
+import { ModalsContext } from "../../Context/ModalsContext";
 
-interface DeleteModalProps {
+interface DeleteCategoryModalProps {
   onClose: any;
   categoryId: number;
 }
 
-export const DeleteModal: FC<DeleteModalProps> = ({ onClose, categoryId }) => {
+export const DeleteCategoryModal: FC<DeleteCategoryModalProps> = ({
+  onClose,
+  categoryId,
+}) => {
   const appContext = useContext(AppContext);
   const modalsContext = useContext(ModalsContext);
   const onDelete = async () => {

@@ -25,7 +25,7 @@ namespace VirtuWally.API.Controllers
         }
 
         [HttpPost("delete")]
-        public IActionResult DeleteCategory(DeleteDto dto)
+        public IActionResult DeleteCategory(DeleteCategoryDto dto)
         {
             User user = _jwtService.CheckIfUserIsLogged(_userRepository, Request);
             if (user == null)
@@ -35,7 +35,26 @@ namespace VirtuWally.API.Controllers
             else
             {
                 _categoryRepository.Remove(dto.CategoryId);
-                _userRepository.GetById(dto.UserId);
+                return Ok(_userRepository.GetById(dto.UserId));
+            }
+        }
+
+        [HttpPost("add")]
+        public IActionResult AddCategory(AddCategoryDto dto)
+        {
+            User user = _jwtService.CheckIfUserIsLogged(_userRepository, Request);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                Category category = new Category
+                {
+                    Name = dto.Name,
+                    UserId = dto.UserId,
+                };
+                _categoryRepository.Add(category);
                 return Ok(_userRepository.GetById(dto.UserId));
             }
         }

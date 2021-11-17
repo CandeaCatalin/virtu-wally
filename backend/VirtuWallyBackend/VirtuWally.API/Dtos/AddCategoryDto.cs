@@ -1,8 +1,8 @@
 ﻿namespace VirtuWally.API.Dtos
 {
-    public class DeleteDto
+    public class AddCategoryDto
     {
         public int UserId { get; set; }
-        public int CategoryId { get; set; }
+        public string Name { get; set; }
     }
 }

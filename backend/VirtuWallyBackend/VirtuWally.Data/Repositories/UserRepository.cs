@@ -36,7 +36,15 @@ namespace VirtuWally.Data
                 throw new FormatException("Email is invalid");
             }
 
-
+            Category car = new Category();
+            car.Name = "Car";
+            Category medical = new Category();
+            medical.Name = "Medical";
+            Category personal = new Category();
+            personal.Name = "Personal";
+            user.Categories.Add(car);
+            user.Categories.Add(medical);
+            user.Categories.Add(personal);
             _context.Users.Add(user);
             _context.SaveChanges();
 

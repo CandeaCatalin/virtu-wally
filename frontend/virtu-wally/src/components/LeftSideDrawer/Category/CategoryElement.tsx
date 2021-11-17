@@ -18,14 +18,20 @@ export const CategoryElement: FC<CategoryElementProps> = ({
         <a className="button-categories" href="/">
           {Category.name}
         </a>
-        <a onClick={() => openCategoryDeleteModal(Category.id)}>
-          <img
-            src={minusImage}
-            alt={"minus"}
-            height={"25px"}
-            style={{ alignSelf: "center", width: "auto" }}
-          />
-        </a>
+        {!(
+          Category.name === "Car" ||
+          Category.name === "Medical" ||
+          Category.name === "Personal"
+        ) && (
+          <a onClick={() => openCategoryDeleteModal(Category.id)}>
+            <img
+              src={minusImage}
+              alt={"minus"}
+              height={"25px"}
+              style={{ alignSelf: "center", width: "auto" }}
+            />
+          </a>
+        )}
       </li>
     </>
   );

@@ -1,5 +1,5 @@
 .side-drawer {
-  height: 93%;
+  height: 96%;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,10 +10,9 @@
 
   background: rgb(104, 63, 247);
   background: linear-gradient(
-          -45deg,
-          rgba(104, 63, 247, 1) 0%,
-          rgba(84, 230, 253, 1) 100%
-
+    -45deg,
+    rgba(104, 63, 247, 1) 0%,
+    rgba(84, 230, 253, 1) 100%
   );
 }
 
@@ -61,6 +60,6 @@
 
 .button-help {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   left: 3rem;
 }

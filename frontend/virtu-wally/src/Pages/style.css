@@ -10,10 +10,13 @@ body {
     );
 }
 
+<<<<<<< HEAD
 .main-body {
     background-color: white;
 }
 
+=======
+>>>>>>> frontend
 .vertical-center {
     /* horiz-align: center; */
     vertical-align: middle;
@@ -47,10 +50,17 @@ body {
 }
 
 .form-register {
+<<<<<<< HEAD
     width: 100%;
     max-width: 330px;
     padding: 15px;
     margin: auto;
+=======
+  width: 100%;
+  max-width: 330px;
+  padding: 0px 15px 15px 15px;
+  margin: auto;
+>>>>>>> frontend
 }
 
 .form-register .checkbox {
@@ -140,4 +150,100 @@ body {
 
 .page-title {
     text-align: center;
+}
+
+.mainpage-body {
+  background-color: white;
+  height: 100%;
+  padding-bottom: 50%;
+}
+.categories-header {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-div {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgb(161, 232, 243) 0%,
+    rgb(255 255 255 / 0%)
+  );
+  margin: 55px 5% 10% 5%;
+  border-radius: 30px;
+  padding-bottom: 10%;
+}
+
+.documents {
+  margin: 1.5rem 1rem;
+  color: white;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.main-div li {
+  margin: 1rem 0rem 0.5rem;
+  list-style-type: none;
+  background-color: transparent;
+}
+
+.main-div a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.document-list {
+  padding-top: 5%;
+}
+
+.button-Documents {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 10px;
+  outline: none;
+  margin: 2%;
+
+  /* background-image: linear-gradient(
+    rgb(148, 234, 248),
+    rgb(255, 255, 255),
+    rgb(148, 234, 248)
+  ); */
+  background-color: white;
+}
+
+.add-document {
+  text-align: right;
+  /* margin-right: 10%; */
+  position: absolute;
+  bottom: 4rem;
+  right: 10%;
+  z-index: 10;
+}
+
+.add-document-1 {
+  text-align: center;
+  /* margin: 10% 0 10%;
+  padding: 30% 0 30%; */
+}
+
+.addition-logo {
+  display: inline-block;
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.3rem;
+  text-align: center;
+  border-radius: 50%;
+  background: rgb(104, 63, 247);
+  vertical-align: middle;
+  margin-right: 0rem;
+  color: white;
 }

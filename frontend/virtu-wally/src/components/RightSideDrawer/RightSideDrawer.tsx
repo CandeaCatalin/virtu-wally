@@ -9,6 +9,11 @@ const RightSideDrawer = () => {
   const apiContext = useContext(APIContext);
   return (
     <nav className="right-side-drawer">
+      <div className="user-image-1 ">
+        <div className="user-image center">
+          <div className="initial-name">SC</div>
+        </div>
+      </div>
       <div className="details">
         <p className="details-name">
           {appContext.user.firstName + " " + appContext.user.lastName}

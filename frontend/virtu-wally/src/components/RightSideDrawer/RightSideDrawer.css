@@ -1,5 +1,5 @@
 .right-side-drawer {
-  height: 93%;
+  height: 96%;
   position: fixed;
   top: 0;
   width: 50%;
@@ -10,9 +10,9 @@
 
   background: rgba(84, 230, 253, 1);
   background: linear-gradient(
-          +45deg,
-          rgba(84, 230, 253, 1) 0%,
-          rgba(104, 63, 247, 1) 100%
+    +45deg,
+    rgba(84, 230, 253, 1) 0%,
+    rgba(104, 63, 247, 1) 100%
   );
 }
 
@@ -24,11 +24,11 @@
 }
 
 .right-side-drawer ul {
-  margin: 7rem 0rem;
+  margin: 50% 0rem;
 }
 
 .right-side-drawer li {
-  margin: 1rem 0rem;
+  margin: 15% 0rem;
   list-style: none;
 }
 
@@ -36,19 +36,56 @@
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  margin: 2rem 2rem;
+  margin: 10% 10%;
 }
 
 .button-signOut {
   position: absolute;
-  bottom: 3rem;
+  bottom: 10%;
   width: 100%;
   text-align: center;
 }
 
+.user-image {
+  text-align: center;
+  /* margin: 2rem 40% 2rem 40%;
+  background: lightblue;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem; */
+}
+
+.user-image-1 {
+  text-align: center;
+  margin: 10% 0 10%;
+  padding: 30% 0 30%;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  /* border-radius: 50%; */
+  background-color: transparent;
+}
+
+.initial-name {
+  content: attr(data-letters);
+  display: inline-block;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  vertical-align: middle;
+  margin-right: 0rem;
+  color: rgb(104, 63, 247);
+}
+
 .details {
   color: white;
-  margin: 10rem 0rem;
+  margin: 10% 0rem;
   width: 100%;
   text-align: center;
   /* font-size: 1rem; */
@@ -60,4 +97,5 @@
 
 .details-email {
   font-size: 0.8rem;
+  margin: 5%;
 }

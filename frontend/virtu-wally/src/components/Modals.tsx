@@ -9,10 +9,22 @@ export const Modals: FC<ModalsProps> = ({}) => {
   return (
     <>
       {modalsContext.isDeleteModalOpen && (
-        <DeleteModal
-          onClose={() => modalsContext.setIsDeleteModalOpen(false)}
-          categoryId={modalsContext.deletedCategoryId}
-        />
+        <div
+          style={{
+            zIndex: 500,
+            position: "absolute",
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0, 0 ,0, 0.3)",
+          }}
+        >
+          <div>
+            <DeleteModal
+              onClose={() => modalsContext.setIsDeleteModalOpen(false)}
+              categoryId={modalsContext.deletedCategoryId}
+            />
+          </div>
+        </div>
       )}
     </>
   );

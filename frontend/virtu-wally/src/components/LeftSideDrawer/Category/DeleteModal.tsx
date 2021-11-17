@@ -29,15 +29,19 @@ export const DeleteModal: FC<DeleteModalProps> = ({ onClose, categoryId }) => {
   };
   return (
     <div
-      id="exampleModal"
+      id="deleteModal"
       tabIndex={-1}
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
+      style={{ position: "relative", top: "20vh" }}
     >
-      <div className="modal-dialog">
+      <div
+        className="modal-dialog"
+        style={{ background: "rgba(0, 0 ,0, 0.3)" }}
+      >
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">
+            <h5 className="modal-title" id="deleteModalLabel">
               Confirm Deletion
             </h5>
             <button

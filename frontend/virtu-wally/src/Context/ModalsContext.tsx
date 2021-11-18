@@ -5,11 +5,15 @@ import { APIContext } from "./APIContext";
 type ModalsContextType = {
   isDeleteModalOpen: boolean;
   isAddCategoryModalOpen: boolean;
+  isSettingsModalOpen: boolean;
+  isContactModalOpen: boolean;
   deletedCategoryId: number;
   openCategoryDeleteModal: any;
   setIsDeleteModalOpen: any;
   setDeletedCategoryId: any;
   setIsAddCategoryModalOpen: any;
+  setIsSettingsModalOpen: any;
+  setIsContactModalOpen: any;
 };
 // @ts-ignore
 export const ModalsContext = createContext<ModalsContextType>(null);
@@ -17,8 +21,11 @@ export const ModalsContext = createContext<ModalsContextType>(null);
 export const ModalsProvider: FC = ({ children }) => {
   const [isDeleteCategoryModalOpen, setIsDeleteCategoryModalOpen] =
     useState(false);
-  const [deletedCategoryId, setDeletedCategoryId] = useState(0);
+
   const [isAddCategoryModalOpen, setIsAddCategoryModalOpen] = useState(false);
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [deletedCategoryId, setDeletedCategoryId] = useState(0);
   const openCategoryDeleteModal = (categoryId: number) => {
     setDeletedCategoryId(categoryId);
     setIsDeleteCategoryModalOpen(true);
@@ -30,7 +37,11 @@ export const ModalsProvider: FC = ({ children }) => {
     setIsDeleteModalOpen: setIsDeleteCategoryModalOpen,
     openCategoryDeleteModal: openCategoryDeleteModal,
     isAddCategoryModalOpen: isAddCategoryModalOpen,
+    isSettingsModalOpen: isSettingsModalOpen,
     setIsAddCategoryModalOpen: setIsAddCategoryModalOpen,
+    setIsSettingsModalOpen: setIsSettingsModalOpen,
+    isContactModalOpen: isContactModalOpen,
+    setIsContactModalOpen: setIsContactModalOpen,
   };
   return (
     <ModalsContext.Provider value={ctx}>{children}</ModalsContext.Provider>

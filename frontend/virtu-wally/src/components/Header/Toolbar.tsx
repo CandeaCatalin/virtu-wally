@@ -4,10 +4,12 @@ import LeftDrawerToggleButton from "../LeftSideDrawer/LeftDrawerToggleButton";
 import RightDrawerToggleButton from "../RightSideDrawer/RightDrawerToggleButton";
 
 import "./Toolbar.css";
+
 interface ToolbarProps {
   leftDrawerClickHandler: any;
   rightDrawerClickHandler: any;
 }
+
 const Toolbar: FC<ToolbarProps> = ({
   leftDrawerClickHandler,
   rightDrawerClickHandler,
@@ -20,11 +22,10 @@ const Toolbar: FC<ToolbarProps> = ({
       <div className="toolbar-logo">
         <a href="/">The Logo </a>
       </div>
-      <div className="spacer"> </div>
+      <div className="spacer"></div>
       <div className="toolbar-navigation-items">
         <ul>
           <li>
-            {/* <a href="/">User</a> */}
             <RightDrawerToggleButton onClick={rightDrawerClickHandler} />
           </li>
         </ul>

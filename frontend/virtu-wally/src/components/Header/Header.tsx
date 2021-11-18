@@ -3,7 +3,6 @@ import Toolbar from "./Toolbar";
 import LeftSideDrawer from "../LeftSideDrawer/LeftSideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
 import RightSideDrawer from "../RightSideDrawer/RightSideDrawer";
-import { DeleteCategoryModal } from "../Modals/DeleteCategoryModal";
 
 interface HeaderProps {}
 

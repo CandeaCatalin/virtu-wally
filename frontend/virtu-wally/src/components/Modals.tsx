@@ -2,6 +2,8 @@ import React, { FC, useContext } from "react";
 import { DeleteCategoryModal } from "./Modals/DeleteCategoryModal";
 import { ModalsContext } from "../Context/ModalsContext";
 import { AddCategoryModal } from "./Modals/AddCategoryModal";
+import { ContactModal } from "./Modals/ContactModal";
+import { SettingsModal } from "./Modals/SettingsModal";
 
 interface ModalsProps {}
 
@@ -10,7 +12,9 @@ export const Modals: FC<ModalsProps> = ({}) => {
   return (
     <>
       {(modalsContext.isDeleteModalOpen ||
-        modalsContext.isAddCategoryModalOpen) && (
+        modalsContext.isAddCategoryModalOpen ||
+        modalsContext.isSettingsModalOpen ||
+        modalsContext.isContactModalOpen) && (
         <div
           style={{
             zIndex: 500,
@@ -32,6 +36,20 @@ export const Modals: FC<ModalsProps> = ({}) => {
             <div>
               <AddCategoryModal
                 onClose={() => modalsContext.setIsAddCategoryModalOpen(false)}
+              />
+            </div>
+          )}
+          {modalsContext.isSettingsModalOpen && (
+            <div>
+              <SettingsModal
+                onClose={() => modalsContext.setIsSettingsModalOpen(false)}
+              />
+            </div>
+          )}
+          {modalsContext.isContactModalOpen && (
+            <div>
+              <ContactModal
+                onClose={() => modalsContext.setIsContactModalOpen(false)}
               />
             </div>
           )}

@@ -45,13 +45,13 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
             >
               Settings
             </h5> */}
-            <button
+            {/* <button
               type="button"
               className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
               onClick={onClose}
-            />
+            /> */}
           </div>
           <div className="modal-body">
             <form>

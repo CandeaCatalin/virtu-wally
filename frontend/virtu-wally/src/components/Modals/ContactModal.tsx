@@ -45,13 +45,13 @@ export const ContactModal: FC<ContactModalProps> = ({ onClose }) => {
             >
               Contact us
             </h5> */}
-            <button
+            {/* <button
               type="button"
               className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
               onClick={onClose}
-            />
+            /> */}
           </div>
           <div className="modal-body">
             <div className="details-div">

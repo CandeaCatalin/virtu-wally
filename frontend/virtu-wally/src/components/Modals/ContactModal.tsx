@@ -1,8 +1,11 @@
-import { FC, useContext, useState } from "react";
+import React, { FC, useContext, useState } from "react";
 import { AppContext } from "../../Context/AppContext";
 import { ModalsContext } from "../../Context/ModalsContext";
 import "./Modals.css";
-
+import headerLogo from "../../Resources/Images/HeaderLogo.svg";
+import phoneLogo from "../../Resources/Images/phone.svg";
+import locationLogo from "../../Resources/Images/location.svg";
+import emailLogo from "../../Resources/Images/email.svg";
 interface ContactModalProps {
   onClose: any;
 }
@@ -38,91 +41,59 @@ export const ContactModal: FC<ContactModalProps> = ({ onClose }) => {
       <div className="modal-dialog">
         <div className="modal-content" style={{ borderRadius: "20px" }}>
           <div className="modal-header">
-            {/* <h5
-              className="modal-title"
-              id="deleteModalLabel"
-              style={{ marginLeft: "5%" }}
-            >
-              Contact us
-            </h5> */}
-            {/* <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              onClick={onClose}
-            /> */}
+            <img
+              src={headerLogo}
+              style={{ height: "20vh" }}
+              alt={"VirtuWally logo"}
+            />
           </div>
           <div className="modal-body">
             <div className="details-div">
-              <h6>Address</h6>
-              <p> Piata Consiliul Europei 2A Timisoara </p>
-              <h6>Phone</h6>
-              <p>+40 766 430 411</p>
-              <h6>Email</h6>
-              <p>virtuwally@contact.com</p>
+              <div style={{ display: "flex" }}>
+                <img
+                  src={locationLogo}
+                  height={"30px"}
+                  alt={"location"}
+                  style={{ marginTop: "10px", marginRight: "15px" }}
+                />
+                <div>
+                  <h6>Address</h6>
+                  <p> Piata Consiliul Europei 2A Timisoara </p>
+                </div>
+              </div>
+              <div style={{ display: "flex" }}>
+                <img
+                  src={phoneLogo}
+                  height={"30px"}
+                  alt={"location"}
+                  style={{ marginTop: "10px", marginRight: "15px" }}
+                />
+                <div>
+                  <h6>Phone</h6>
+                  <p>+40 766 430 411</p>
+                </div>
+              </div>
+              <div style={{ display: "flex" }}>
+                <img
+                  src={emailLogo}
+                  height={"30px"}
+                  alt={"location"}
+                  style={{ marginTop: "10px", marginRight: "15px" }}
+                />
+                <div>
+                  <h6>Email</h6>
+                  <p>virtuwally@contact.com</p>
+                </div>
+              </div>
             </div>
-            <div className="div-line" />
-            <form>
-              <div className="send-message-div">
-                <h5> Send us a message </h5>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="floatingInput"
-                  style={{ borderRadius: "10px" }}
-                  placeholder="Travel"
-                  onChange={(e) => {
-                    setCategoryName(e.target.value);
-                  }}
-                />
-                <label htmlFor="floatingInput">Enter your name</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="floatingInput"
-                  style={{ borderRadius: "10px" }}
-                  placeholder="Travel"
-                  onChange={(e) => {
-                    setCategoryName(e.target.value);
-                  }}
-                />
-                <label htmlFor="floatingInput">Enter your email</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="floatingInput"
-                  style={{ borderRadius: "10px" }}
-                  placeholder="Travel"
-                  onChange={(e) => {
-                    setCategoryName(e.target.value);
-                  }}
-                />
-                <label htmlFor="floatingInput">Enter your message</label>
-              </div>
-            </form>
           </div>
           <div className="modal-footer">
             <button
               type="button"
-              className="btn button-modal-sec"
-              data-bs-dismiss="modal"
-              onClick={onClose}
-            >
-              Close
-            </button>
-            <button
-              type="button"
               className="btn button-modal-prim"
-              onClick={onSubmit}
+              onClick={() => modalsContext.setIsContactModalOpen(false)}
             >
-              Submit
+              Ok
             </button>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import LeftDrawerToggleButton from "../LeftSideDrawer/LeftDrawerToggleButton";
 import RightDrawerToggleButton from "../RightSideDrawer/RightDrawerToggleButton";
-
+import headerLogo from "../../Resources/Images/HeaderLogo.svg";
 import "./Toolbar.css";
 
 interface ToolbarProps {
@@ -20,7 +20,7 @@ const Toolbar: FC<ToolbarProps> = ({
         <LeftDrawerToggleButton onClick={leftDrawerClickHandler} />
       </div>
       <div className="toolbar-logo">
-        <a href="/">The Logo </a>
+        <img src={headerLogo} style={{ height: "20vh" }} />
       </div>
       <div className="spacer"></div>
       <div className="toolbar-navigation-items">

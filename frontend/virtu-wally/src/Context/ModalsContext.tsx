@@ -7,9 +7,11 @@ type ModalsContextType = {
   isAddCategoryModalOpen: boolean;
   isSettingsModalOpen: boolean;
   isContactModalOpen: boolean;
+  isAddDocumentModalOpen: boolean;
   deletedCategoryId: number;
   openCategoryDeleteModal: any;
   setIsDeleteModalOpen: any;
+  setIsAddDocumentModalOpen: any;
   setDeletedCategoryId: any;
   setIsAddCategoryModalOpen: any;
   setIsSettingsModalOpen: any;
@@ -23,6 +25,7 @@ export const ModalsProvider: FC = ({ children }) => {
     useState(false);
 
   const [isAddCategoryModalOpen, setIsAddCategoryModalOpen] = useState(false);
+  const [isAddDocumentModalOpen, setIsAddDocumentModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [deletedCategoryId, setDeletedCategoryId] = useState(0);
@@ -42,6 +45,8 @@ export const ModalsProvider: FC = ({ children }) => {
     setIsSettingsModalOpen: setIsSettingsModalOpen,
     isContactModalOpen: isContactModalOpen,
     setIsContactModalOpen: setIsContactModalOpen,
+    setIsAddDocumentModalOpen: setIsAddDocumentModalOpen,
+    isAddDocumentModalOpen: isAddDocumentModalOpen,
   };
   return (
     <ModalsContext.Provider value={ctx}>{children}</ModalsContext.Provider>

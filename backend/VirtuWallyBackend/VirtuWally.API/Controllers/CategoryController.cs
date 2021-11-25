@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VirtuWally.API.Dtos;
@@ -49,6 +50,10 @@ namespace VirtuWally.API.Controllers
             }
             else
             {
+                if (user.Categories.Count() == 6)
+                {
+                    return Ok(new { message = "Limit reached" });
+                }
                 Category category = new Category
                 {
                     Name = dto.Name,

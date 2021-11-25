@@ -8,11 +8,11 @@ import { ModalsProvider } from "./Context/ModalsContext";
 function App() {
   return (
     <AppProvider>
-      <APIProvider>
-        <ModalsProvider>
+      <ModalsProvider>
+        <APIProvider>
           <Main />
-        </ModalsProvider>
-      </APIProvider>
+        </APIProvider>
+      </ModalsProvider>
     </AppProvider>
   );
 }

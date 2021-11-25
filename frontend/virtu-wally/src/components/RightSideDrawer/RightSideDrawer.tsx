@@ -1,16 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import "./RightSideDrawer.css";
 import { AppContext } from "../../Context/AppContext";
 import { APIContext } from "../../Context/APIContext";
 import { Avatar } from "@mui/material";
 import { ModalsContext } from "../../Context/ModalsContext";
-
+import SettingsLogo from "../../Resources/Images/settingsIcon.svg";
+import ContactLogo from "../../Resources/Images/mailIcon.svg";
 const RightSideDrawer = () => {
   const appContext = useContext(AppContext);
   const apiContext = useContext(APIContext);
   const modalsContext = useContext(ModalsContext);
-  const onImageChange = (file: any) => {};
+  const onImageChange = async (file: any) => {
+    await apiContext.uploadImage(file);
+  };
   return (
     <nav className="right-side-drawer">
       <div className="user-image-1 ">
@@ -48,6 +51,11 @@ const RightSideDrawer = () => {
             className=" right-list"
             onClick={() => modalsContext.setIsSettingsModalOpen(true)}
           >
+            <img
+              src={SettingsLogo}
+              style={{ height: "3vh", paddingRight: "10px", marginTop: "-3px" }}
+              alt={"settingLogo"}
+            />
             Settings
           </div>
         </li>
@@ -56,6 +64,11 @@ const RightSideDrawer = () => {
             className="right-list"
             onClick={() => modalsContext.setIsContactModalOpen(true)}
           >
+            <img
+              src={ContactLogo}
+              style={{ height: "3vh", paddingRight: "10px" }}
+              alt={"contactLogo"}
+            />
             Contact Us
           </div>
         </li>

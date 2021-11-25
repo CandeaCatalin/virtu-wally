@@ -64,11 +64,46 @@ namespace VirtuWally.Data
             ;
         }
 
-        public User Update(User user)
+        public User UpdateImage(User user)
         {
             _context.Users.Update(user);
             _context.SaveChanges();
             return user;
+        }
+
+        public User UpdateSettings(User user, string newPassword)
+        {
+            User updatedUser = GetById(user.Id);
+
+            if (!string.IsNullOrEmpty(user.LastName))
+            {
+                updatedUser.LastName = user.LastName;
+            }
+
+            if (!string.IsNullOrEmpty(user.FirstName))
+            {
+                updatedUser.FirstName = user.FirstName;
+            }
+
+
+
+            if (!string.IsNullOrEmpty(user.Email))
+            {
+                if (new System.Net.Mail.MailAddress(user.Email) == null)
+                {
+                    throw new FormatException("Email is invalid");
+                }
+                updatedUser.Email = user.Email;
+            }
+
+            if (!string.IsNullOrEmpty(user.HashPassword))
+            {
+                updatedUser.HashPassword = user.HashPassword;
+            }
+
+            _context.Users.Update(updatedUser);
+            _context.SaveChanges();
+            return updatedUser;
         }
 
         bool IsValidEmail(string email)

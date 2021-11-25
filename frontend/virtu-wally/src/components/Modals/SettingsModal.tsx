@@ -2,6 +2,9 @@ import { FC, useContext, useState } from "react";
 import { AppContext } from "../../Context/AppContext";
 import { ModalsContext } from "../../Context/ModalsContext";
 import "./Modals.css";
+import { User } from "../../Models/User";
+import { APIContext } from "../../Context/APIContext";
+import { Toast } from "../Toast";
 
 interface SettingsModalProps {
   onClose: any;
@@ -10,23 +13,30 @@ interface SettingsModalProps {
 export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
   const appContext = useContext(AppContext);
   const modalsContext = useContext(ModalsContext);
-  const [categoryName, setCategoryName] = useState("");
+  const apiContext = useContext(APIContext);
+  const [newUser, setNewUser] = useState<User>({
+    createdTime: new Date(),
+    docs: [],
+    email: "",
+    firstName: "",
+    id: 0,
+    imageUrl: "",
+    lastName: "",
+    categories: [],
+  });
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const onSubmit = async () => {
-    const response = await fetch("/api/Category/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({
-        name: categoryName,
-        userId: appContext.user.id,
-      }),
-    });
-    const content = await response.json();
-    if (content.id !== undefined) {
-      appContext.setUser(content);
-    }
-    modalsContext.setIsSettingsModalOpen(false);
+    newUser.id = appContext.user.id;
+    await apiContext.settings(
+      newUser,
+      currentPassword,
+      newPassword,
+      confirmPassword
+    );
   };
+
   return (
     <div
       id="deleteModal"
@@ -35,24 +45,9 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
       aria-hidden="true"
       style={{ position: "relative", top: "15vh" }}
     >
+      <Toast />
       <div className="modal-dialog">
         <div className="modal-content" style={{ borderRadius: "20px" }}>
-          <div className="modal-header">
-            {/* <h5
-              className="modal-title"
-              id="deleteModalLabel"
-              style={{ marginLeft: "5%" }}
-            >
-              Settings
-            </h5> */}
-            {/* <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              onClick={onClose}
-            /> */}
-          </div>
           <div className="modal-body">
             <form>
               <div className="row">
@@ -64,10 +59,17 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
                     style={{ borderRadius: "10px" }}
                     placeholder="Travel"
                     onChange={(e) => {
-                      setCategoryName(e.target.value);
+                      setNewUser({ ...newUser, firstName: e.target.value });
                     }}
                   />
-                  <label htmlFor="floatingInput">First Name</label>
+                  <label
+                    htmlFor="floatingInput"
+                    style={{ color: "rgb(138 139 139)", left: "10px" }}
+                  >
+                    {newUser.firstName.length === 0
+                      ? appContext.user.firstName
+                      : "First Name"}
+                  </label>
                 </div>
                 <div className="form-floating mb-3 col-6">
                   <input
@@ -77,10 +79,17 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
                     style={{ borderRadius: "10px" }}
                     placeholder="Travel"
                     onChange={(e) => {
-                      setCategoryName(e.target.value);
+                      setNewUser({ ...newUser, lastName: e.target.value });
                     }}
                   />
-                  <label htmlFor="floatingInput">Last Name</label>
+                  <label
+                    htmlFor="floatingInput"
+                    style={{ color: "rgb(138 139 139)", left: "10px" }}
+                  >
+                    {newUser.lastName.length === 0
+                      ? appContext.user.lastName
+                      : "Last Name"}
+                  </label>
                 </div>
               </div>
               <div className="form-floating mb-3">
@@ -91,10 +100,15 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
                   style={{ borderRadius: "10px" }}
                   placeholder="Travel"
                   onChange={(e) => {
-                    setCategoryName(e.target.value);
+                    setNewUser({ ...newUser, email: e.target.value });
                   }}
                 />
-                <label htmlFor="floatingInput">Email</label>
+                <label
+                  htmlFor="floatingInput"
+                  style={{ color: "rgb(138 139 139)", left: "10px" }}
+                >
+                  {newUser.email.length === 0 ? appContext.user.email : "Email"}
+                </label>
               </div>
 
               <div className="form-floating mb-3">
@@ -105,10 +119,15 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
                   style={{ borderRadius: "10px" }}
                   placeholder="Travel"
                   onChange={(e) => {
-                    setCategoryName(e.target.value);
+                    setNewPassword(e.target.value);
                   }}
                 />
-                <label htmlFor="floatingInput">Current password</label>
+                <label
+                  htmlFor="floatingInput"
+                  style={{ color: "rgb(138 139 139)", left: "10px" }}
+                >
+                  New password
+                </label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -118,10 +137,15 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
                   style={{ borderRadius: "10px" }}
                   placeholder="Travel"
                   onChange={(e) => {
-                    setCategoryName(e.target.value);
+                    setConfirmPassword(e.target.value);
                   }}
                 />
-                <label htmlFor="floatingInput">New password</label>
+                <label
+                  htmlFor="floatingInput"
+                  style={{ color: "rgb(138 139 139)", left: "10px" }}
+                >
+                  Confirm new password
+                </label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -131,10 +155,15 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
                   style={{ borderRadius: "10px" }}
                   placeholder="Travel"
                   onChange={(e) => {
-                    setCategoryName(e.target.value);
+                    setCurrentPassword(e.target.value);
                   }}
                 />
-                <label htmlFor="floatingInput">Confirm new password</label>
+                <label
+                  htmlFor="floatingInput"
+                  style={{ color: "rgb(138 139 139)", left: "10px" }}
+                >
+                  Current password <span style={{ color: "red" }}>*</span>
+                </label>
               </div>
             </form>
           </div>

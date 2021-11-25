@@ -23,7 +23,10 @@ export const CategoryElement: FC<CategoryElementProps> = ({
           Category.name === "Medical" ||
           Category.name === "Personal"
         ) && (
-          <a onClick={() => openCategoryDeleteModal(Category.id)}>
+          <a
+            onClick={() => openCategoryDeleteModal(Category.id)}
+            style={{ paddingLeft: "8px" }}
+          >
             <img
               src={minusImage}
               alt={"minus"}

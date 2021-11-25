@@ -2,6 +2,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using VirtuWally.API.Dtos;
 using VirtuWally.API.Services;
 using VirtuWally.Data;
 using VirtuWally.Domain;
@@ -49,7 +50,7 @@ namespace VirtuWally.API.Controllers
                     file.CopyTo(ms);
                     user.ImageUrl = ms.ToArray();
 
-                    _repository.Update(user);
+                    _repository.UpdateImage(user);
                 }
                 else
                 {
@@ -58,6 +59,32 @@ namespace VirtuWally.API.Controllers
 
                 return Ok(user);
             }
+        }[HttpPost("settings")]
+        public IActionResult UpdateUser(UpdateDto dto)
+        {
+            try
+            {
+                User checkedUser = _repository.GetById(dto.Id);
+                if (!BCrypt.Net.BCrypt.Verify(dto.Password, checkedUser.HashPassword))
+                {
+                    throw new ArgumentException("Invalid password");
+                }
+                User user = new User
+                {
+                    Id = dto.Id,
+                    FirstName = dto.FirstName,
+                    LastName = dto.LastName,
+                    Email = dto.Email,
+                    HashPassword = !string.IsNullOrEmpty(dto.NewPassword)? BCrypt.Net.BCrypt.HashPassword(dto.NewPassword):""
+                };
+                User updatedUser = _repository.UpdateSettings(user,dto.NewPassword);
+                return Ok(updatedUser);
+            }
+            catch (Exception ex)
+            {
+                return Ok(new { message = ex.Message });
+            }
+
         }
     }
 }

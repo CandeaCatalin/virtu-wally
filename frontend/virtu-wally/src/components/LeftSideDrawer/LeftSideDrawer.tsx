@@ -15,13 +15,14 @@ const LeftSideDrawer: FC<LeftSideDrawerProps> = ({}) => {
     <nav className="side-drawer">
       <div style={{ display: "flex" }}>
         <div className="categories">Categories</div>
-
-        <img
-          onClick={() => modalsContext.setIsAddCategoryModalOpen(true)}
-          style={{ marginTop: "5px", height: "20px", alignSelf: "center" }}
-          src={plus}
-          alt="plus"
-        />
+        {appContext.user.categories.length < 6 && (
+          <img
+            onClick={() => modalsContext.setIsAddCategoryModalOpen(true)}
+            style={{ marginTop: "5px", height: "20px", alignSelf: "center" }}
+            src={plus}
+            alt="plus"
+          />
+        )}
       </div>
       {/* aici punem categoriile fiecarui user */}
       <ul>

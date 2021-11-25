@@ -25,7 +25,7 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
     if (content.id !== undefined) {
       appContext.setUser(content);
     }
-    modalsContext.setIsAddCategoryModalOpen(false);
+    modalsContext.setIsSettingsModalOpen(false);
   };
   return (
     <div

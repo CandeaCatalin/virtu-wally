@@ -2,6 +2,7 @@ import React, { FC, useContext } from "react";
 import { DeleteCategoryModal } from "./Modals/DeleteCategoryModal";
 import { ModalsContext } from "../Context/ModalsContext";
 import { AddCategoryModal } from "./Modals/AddCategoryModal";
+import { AddDocumentModal } from "./Modals/AddDocumentModal";
 import { ContactModal } from "./Modals/ContactModal";
 import { SettingsModal } from "./Modals/SettingsModal";
 
@@ -13,6 +14,7 @@ export const Modals: FC<ModalsProps> = ({}) => {
     <>
       {(modalsContext.isDeleteModalOpen ||
         modalsContext.isAddCategoryModalOpen ||
+        modalsContext.isAddDocumentModalOpen ||
         modalsContext.isSettingsModalOpen ||
         modalsContext.isContactModalOpen) && (
         <div
@@ -36,6 +38,13 @@ export const Modals: FC<ModalsProps> = ({}) => {
             <div>
               <AddCategoryModal
                 onClose={() => modalsContext.setIsAddCategoryModalOpen(false)}
+              />
+            </div>
+          )}
+          {modalsContext.isAddDocumentModalOpen && (
+            <div>
+              <AddDocumentModal
+                onClose={() => modalsContext.setIsAddDocumentModalOpen(false)}
               />
             </div>
           )}

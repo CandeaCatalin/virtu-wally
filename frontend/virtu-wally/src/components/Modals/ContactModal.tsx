@@ -25,7 +25,7 @@ export const ContactModal: FC<ContactModalProps> = ({ onClose }) => {
     if (content.id !== undefined) {
       appContext.setUser(content);
     }
-    modalsContext.setIsAddCategoryModalOpen(false);
+    modalsContext.setIsContactModalOpen(false);
   };
   return (
     <div

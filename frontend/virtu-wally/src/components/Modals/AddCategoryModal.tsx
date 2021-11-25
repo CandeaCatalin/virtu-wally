@@ -1,6 +1,7 @@
 import { FC, useContext, useState } from "react";
 import { AppContext } from "../../Context/AppContext";
 import { ModalsContext } from "../../Context/ModalsContext";
+import "./Modals.css";
 
 interface AddCategoryModalProps {
   onClose: any;
@@ -35,7 +36,7 @@ export const AddCategoryModal: FC<AddCategoryModalProps> = ({ onClose }) => {
       style={{ position: "relative", top: "20vh" }}
     >
       <div className="modal-dialog">
-        <div className="modal-content" style={{ borderRadius: "10px" }}>
+        <div className="modal-content" style={{ borderRadius: "20px" }}>
           <div className="modal-header">
             <h5 className="modal-title" id="deleteModalLabel">
               Add a new Category
@@ -55,6 +56,7 @@ export const AddCategoryModal: FC<AddCategoryModalProps> = ({ onClose }) => {
                   type="text"
                   className="form-control"
                   id="floatingInput"
+                  style={{ borderRadius: "10px" }}
                   placeholder="Travel"
                   onChange={(e) => {
                     setCategoryName(e.target.value);

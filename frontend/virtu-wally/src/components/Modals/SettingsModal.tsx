@@ -1,6 +1,7 @@
 import { FC, useContext, useState } from "react";
 import { AppContext } from "../../Context/AppContext";
 import { ModalsContext } from "../../Context/ModalsContext";
+import "./Modals.css";
 
 interface SettingsModalProps {
   onClose: any;
@@ -32,14 +33,18 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
       tabIndex={-1}
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
-      style={{ position: "relative", top: "20vh" }}
+      style={{ position: "relative", top: "15vh" }}
     >
       <div className="modal-dialog">
-        <div className="modal-content" style={{ borderRadius: "10px" }}>
+        <div className="modal-content" style={{ borderRadius: "20px" }}>
           <div className="modal-header">
-            <h5 className="modal-title" id="deleteModalLabel">
+            {/* <h5
+              className="modal-title"
+              id="deleteModalLabel"
+              style={{ marginLeft: "5%" }}
+            >
               Settings
-            </h5>
+            </h5> */}
             <button
               type="button"
               className="btn-close"
@@ -50,17 +55,86 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
           </div>
           <div className="modal-body">
             <form>
+              <div className="row">
+                <div className="form-floating mb-3 col-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="floatingInput"
+                    style={{ borderRadius: "10px" }}
+                    placeholder="Travel"
+                    onChange={(e) => {
+                      setCategoryName(e.target.value);
+                    }}
+                  />
+                  <label htmlFor="floatingInput">First Name</label>
+                </div>
+                <div className="form-floating mb-3 col-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="floatingInput"
+                    style={{ borderRadius: "10px" }}
+                    placeholder="Travel"
+                    onChange={(e) => {
+                      setCategoryName(e.target.value);
+                    }}
+                  />
+                  <label htmlFor="floatingInput">Last Name</label>
+                </div>
+              </div>
               <div className="form-floating mb-3">
                 <input
-                  type="text"
+                  type="email"
                   className="form-control"
                   id="floatingInput"
+                  style={{ borderRadius: "10px" }}
                   placeholder="Travel"
                   onChange={(e) => {
                     setCategoryName(e.target.value);
                   }}
                 />
-                <label htmlFor="floatingInput">Category Name</label>
+                <label htmlFor="floatingInput">Email</label>
+              </div>
+
+              <div className="form-floating mb-3">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="floatingInput"
+                  style={{ borderRadius: "10px" }}
+                  placeholder="Travel"
+                  onChange={(e) => {
+                    setCategoryName(e.target.value);
+                  }}
+                />
+                <label htmlFor="floatingInput">Current password</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="floatingInput"
+                  style={{ borderRadius: "10px" }}
+                  placeholder="Travel"
+                  onChange={(e) => {
+                    setCategoryName(e.target.value);
+                  }}
+                />
+                <label htmlFor="floatingInput">New password</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="floatingInput"
+                  style={{ borderRadius: "10px" }}
+                  placeholder="Travel"
+                  onChange={(e) => {
+                    setCategoryName(e.target.value);
+                  }}
+                />
+                <label htmlFor="floatingInput">Confirm new password</label>
               </div>
             </form>
           </div>
@@ -78,7 +152,7 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
               className="btn button-modal-prim"
               onClick={onSubmit}
             >
-              Save
+              Submit
             </button>
           </div>
         </div>

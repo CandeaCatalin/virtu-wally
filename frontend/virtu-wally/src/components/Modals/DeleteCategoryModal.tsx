@@ -39,7 +39,7 @@ export const DeleteCategoryModal: FC<DeleteCategoryModalProps> = ({
       style={{ position: "relative", top: "20vh" }}
     >
       <div className="modal-dialog">
-        <div className="modal-content" style={{ borderRadius: "10px" }}>
+        <div className="modal-content" style={{ borderRadius: "20px" }}>
           <div className="modal-header">
             <h5 className="modal-title" id="deleteModalLabel">
               Confirm Deletion

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useContext, useEffect, useState } from "react";
 import carLogo from "../../Resources/Images/car.svg";
 import medicalLogo from "../../Resources/Images/hospitalLogo.svg";
 import personalLogo from "../../Resources/Images/personLogo.svg";
@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { ModalsContext } from "../../Context/ModalsContext";
 interface DocumentElementProps {
   categoryName: string;
   name: string;
@@ -28,7 +29,7 @@ export const DocumentElement: FC<DocumentElementProps> = ({
   const [logo, setLogo] = useState("");
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
-
+  const modalsContext = useContext(ModalsContext);
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -132,7 +133,11 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                         paddingBottom: "0px",
                       }}
                     >
-                      <MenuItem onClick={handleClose}>
+                      <MenuItem
+                        onClick={() =>
+                          modalsContext.setIsEditDocumentModalOpen(true)
+                        }
+                      >
                         <EditIcon />
                         Edit
                       </MenuItem>

@@ -43,7 +43,7 @@ export const ContactModal: FC<ContactModalProps> = ({ onClose }) => {
           <div className="modal-header">
             <img
               src={headerLogo}
-              style={{ height: "20vh" }}
+              style={{ height: "30vh", width: "100%" }}
               alt={"VirtuWally logo"}
             />
           </div>

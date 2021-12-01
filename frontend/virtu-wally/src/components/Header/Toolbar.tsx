@@ -20,7 +20,7 @@ const Toolbar: FC<ToolbarProps> = ({
         <LeftDrawerToggleButton onClick={leftDrawerClickHandler} />
       </div>
       <div className="toolbar-logo">
-        <img src={headerLogo} style={{ height: "20vh" }} />
+        <img src={headerLogo} style={{ height: "20vh", width: "120%" }} />
       </div>
       <div className="spacer"></div>
       <div className="toolbar-navigation-items">

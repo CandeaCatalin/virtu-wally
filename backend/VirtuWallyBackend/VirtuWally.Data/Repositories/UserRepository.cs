@@ -105,7 +105,13 @@ namespace VirtuWally.Data
             _context.SaveChanges();
             return updatedUser;
         }
-
+        public void VerifyRegistration(int userId)
+        {
+            User user = GetById(userId);
+            user.IsActivated = true;
+            _context.Users.Update(user);
+            _context.SaveChanges();
+        }
         bool IsValidEmail(string email)
         {
             if (email.Trim().EndsWith("."))
@@ -123,5 +129,7 @@ namespace VirtuWally.Data
                 return false;
             }
         }
+
+        
     }
 }

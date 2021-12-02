@@ -4,16 +4,23 @@ import { Main } from "./Main";
 import { AppProvider } from "./Context/AppContext";
 import { APIProvider } from "./Context/APIContext";
 import { ModalsProvider } from "./Context/ModalsContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <AppProvider>
-      <ModalsProvider>
-        <APIProvider>
-          <Main />
-        </APIProvider>
-      </ModalsProvider>
-    </AppProvider>
+    <BrowserRouter>
+      <AppProvider>
+        <ModalsProvider>
+          <APIProvider>
+            <Routes>
+              <Route path="/" element={<Main />} />
+
+              {/*<Route path="/ForgetPassword"></Route>*/}
+            </Routes>
+          </APIProvider>
+        </ModalsProvider>
+      </AppProvider>
+    </BrowserRouter>
   );
 }
 

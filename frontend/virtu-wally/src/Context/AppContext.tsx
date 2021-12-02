@@ -51,7 +51,7 @@ export const AppProvider: FC = ({ children }) => {
     })();
   }, []);
   useEffect(() => {
-    if (user.id === 0) {
+    if (user?.id === 0) {
       changePage("Login");
     } else {
       changePage("Main");

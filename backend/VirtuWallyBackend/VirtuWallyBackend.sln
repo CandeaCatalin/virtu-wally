@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtuWally.Domain", "VirtuW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtuWally.Data", "VirtuWally.Data\VirtuWally.Data.csproj", "{7EFD6793-7268-4001-8832-1B7FE91D2FC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtuWally.API", "VirtuWally.API\VirtuWally.API.csproj", "{5E1FB72B-5F6F-4A98-94FF-D35070271353}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtuWally.API", "VirtuWally.API\VirtuWally.API.csproj", "{5E1FB72B-5F6F-4A98-94FF-D35070271353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

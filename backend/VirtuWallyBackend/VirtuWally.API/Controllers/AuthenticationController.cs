@@ -43,6 +43,9 @@ namespace VirtuWally.API.Controllers
                 {
                     HttpOnly = true
                 });
+                MailService mailService = new MailService();
+                mailService.sendEmail(returnedUser.Email,"Hello. In order to confirm your registration please access " + "https://localhost:5001/api/Authentication/activateAccount?userId=" + returnedUser.Id.ToString(), "Confirm registration!");
+
                 return Created("success", returnedUser);
             }
             catch (FormatException e)
@@ -66,12 +69,16 @@ namespace VirtuWally.API.Controllers
             {
                 return BadRequest(new { message = "Invalid Credentials" });
             }
+            if(user.IsActivated == false)
+            {
+                return BadRequest(new { message = "The account must be activated!" });
+            }
             string jwt = _jwtService.Generate(user.Id);
             Response.Cookies.Append("jwt", jwt, new CookieOptions
             {
                 HttpOnly = true
             });
-            return Ok(new { message = "success", user = user });
+            return Ok(new {  user = user });
         }
 
         [HttpPost("logout")]
@@ -80,5 +87,17 @@ namespace VirtuWally.API.Controllers
             Response.Cookies.Delete("jwt");
             return Ok(new { message = "Logout Successful" });
         }
+        [HttpGet("activateAccount")]
+        public IActionResult ActivateAccount(int userId)
+        {
+            _repository.VerifyRegistration(userId);
+            return Ok();
+        }
+        //[HttpPost("ForgetPassword")]
+        //public IActionResult ForgetPassword(string Email)
+        //{
+        //    I
+        //    return Ok();
+        //}
     }
 }

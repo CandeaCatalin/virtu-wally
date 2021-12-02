@@ -16,5 +16,6 @@ namespace VirtuWally.Domain
         public List<Doc> Docs { get; set; } = new List<Doc>();
         public List<Category> Categories { get; set; } = new List<Category>();
         public DateTime CreatedTime { get; set; }
+        public bool IsActivated { get; set; } = false;
     }
 }

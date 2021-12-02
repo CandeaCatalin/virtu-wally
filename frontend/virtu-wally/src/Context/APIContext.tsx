@@ -26,7 +26,7 @@ export const APIProvider: FC = ({ children }) => {
     });
     const content = await response.json();
 
-    if (content.message !== "Invalid Credentials") {
+    if (content.message === undefined) {
       appContext.setUser(content.user);
       appContext.changePage("Main");
     } else {
@@ -55,8 +55,7 @@ export const APIProvider: FC = ({ children }) => {
       });
       const content = await response.json();
       if (content.message === undefined) {
-        appContext.setUser(content);
-        appContext.changePage("Main");
+        appContext.changePage("Login");
       } else {
         toast.error(content.message, {
           position: "top-right",

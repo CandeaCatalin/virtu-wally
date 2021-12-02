@@ -17,11 +17,11 @@ const RightDrawerToggleButton: FC<rightDrawerToggleButtonProps> = ({
     <div className="toggle-button-line" />
     <div className="toggle-button-line" /> */}
       <div className="align-items-center">
-        {appContext.user.imageUrl.length !== 0 ? (
+        {appContext.user?.imageUrl.length !== 0 ? (
           <Avatar
             alt="CC"
             sx={{ width: 40, height: 40 }}
-            src={"data:image/png;base64," + appContext.user.imageUrl}
+            src={"data:image/png;base64," + appContext.user?.imageUrl}
           />
         ) : (
           <Avatar sx={{ width: 40, height: 40 }}>

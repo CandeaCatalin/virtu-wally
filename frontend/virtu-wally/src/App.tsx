@@ -5,6 +5,7 @@ import { AppProvider } from "./Context/AppContext";
 import { APIProvider } from "./Context/APIContext";
 import { ModalsProvider } from "./Context/ModalsContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ForgetPassword } from "./Pages/ForgetPassword";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Main />} />
 
-              {/*<Route path="/ForgetPassword"></Route>*/}
+              <Route path="/ForgetPassword/:email/:userId" element = {<ForgetPassword/>}/>
             </Routes>
           </APIProvider>
         </ModalsProvider>

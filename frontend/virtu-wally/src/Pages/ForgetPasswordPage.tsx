@@ -2,6 +2,7 @@ import { FC, SyntheticEvent, useContext, useState } from "react";
 import "./style.css";
 import LoginLogo from "../Resources/Images/LoginLogo.svg";
 import { AppContext } from "../Context/AppContext";
+import {APIContext} from "../Context/APIContext";
 
 interface ForgetPasswordPageProps {
   visible: boolean;
@@ -11,16 +12,11 @@ export const ForgetPasswordPage: FC<ForgetPasswordPageProps> = ({
   visible,
 }) => {
   const context = useContext(AppContext);
+  const apiContext = useContext(APIContext);
   const [email, setEmail] = useState("");
   const onSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/Authentication/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({ email }),
-    });
-    context.changePage("Login");
+    apiContext.forgetPasswordSendMail(email);
   };
   return (
     <>

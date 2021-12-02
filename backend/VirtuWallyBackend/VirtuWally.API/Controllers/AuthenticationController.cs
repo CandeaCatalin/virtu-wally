@@ -93,11 +93,32 @@ namespace VirtuWally.API.Controllers
             _repository.VerifyRegistration(userId);
             return Ok();
         }
-        //[HttpPost("ForgetPassword")]
-        //public IActionResult ForgetPassword(string Email)
-        //{
-        //    I
-        //    return Ok();
-        //}
+        [HttpPost("ForgetPasswordSendEmail")]
+        public IActionResult ForgetPasswordSendEmail(ForgetPasswordSendMail dto)
+        {
+            User user = _repository.GetByEmail(dto.Email.ToLower());
+            if (user == null)
+            {
+                return Ok(new { message = "User not found!" });
+            }
+            MailService mailService = new MailService();
+            mailService.sendEmail(user.Email,"Hello. In order to change your password please access " + "http://localhost:3000/ForgetPassword/" + user.Email.ToString()+"/"+user.Id.ToString(), "Change your password!");
+
+            return Ok(new {message = "Mail sent!"});
+        }
+        [HttpPost("ForgetPassword")]
+        public IActionResult ForgetPassword(ForgetPasswordDto dto)
+        {
+            User user = _repository.GetByEmail(dto.Email.ToLower());
+            if (user == null)
+            {
+                return Ok(new { message = "User not found!" });
+
+            }
+
+            user.HashPassword = BCrypt.Net.BCrypt.HashPassword(dto.Password);
+            _repository.UpdateSettings(user,user.HashPassword);
+            return Ok("Password Updated!");
+        }
     }
 }

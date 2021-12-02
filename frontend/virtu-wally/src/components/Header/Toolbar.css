@@ -49,3 +49,9 @@
 .toolbar-navigation-items a:active {
   color: orange;
 }
+
+.toolbar-logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

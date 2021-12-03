@@ -1,4 +1,4 @@
-import {FC, useContext} from "react";
+import {FC, useContext, useEffect, useState} from "react";
 import "./style.css";
 import React from "react";
 import {AppContext} from "../Context/AppContext";
@@ -17,6 +17,10 @@ interface MainPageProps {
 export const MainPage: FC<MainPageProps> = ({visible}) => {
     const appContext = useContext(AppContext);
     const modalContext = useContext(ModalsContext);
+    const [docs, setDocs] = useState(appContext.user.docs);
+    useEffect(() => {
+        setDocs(appContext.user.docs);
+    }, [appContext.user]);
     return (
         <>
             <Toast/>
@@ -30,12 +34,12 @@ export const MainPage: FC<MainPageProps> = ({visible}) => {
 
                         <div className="main-div">
                             <div className="documents"></div>
-                            {/* aici punem categoriile fiecarui user */}
+
                             <ul
                                 className="document-list"
                                 style={{overflowY: "auto", height: "70vh"}}
                             >
-                                {appContext.user.docs.map((Doc, idx) => <DocumentElement
+                                {docs.map((Doc, idx) => <DocumentElement
                                     categoryName={Doc.category.name} document={Doc} key={idx}/>)}
 
                             </ul>

@@ -10,7 +10,7 @@ using VirtuWally.Data;
 namespace VirtuWally.Data.Migrations
 {
     [DbContext(typeof(VirtuWallyContext))]
-    [Migration("20211203140944_init")]
+    [Migration("20211203202043_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,7 +48,7 @@ namespace VirtuWally.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CategoryId")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<byte[]>("FileData")
@@ -62,7 +62,7 @@ namespace VirtuWally.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getdate()");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -129,13 +129,13 @@ namespace VirtuWally.Data.Migrations
                 {
                     b.HasOne("VirtuWally.Domain.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("VirtuWally.Domain.User", null)
                         .WithMany("Docs")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Category");
                 });

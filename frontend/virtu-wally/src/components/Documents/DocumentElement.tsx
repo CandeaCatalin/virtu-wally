@@ -1,4 +1,4 @@
-import React, {FC, useContext, useEffect, useState} from "react";
+import React, {FC, SyntheticEvent, useContext, useEffect, useState} from "react";
 import carLogo from "../../Resources/Images/car.svg";
 import medicalLogo from "../../Resources/Images/hospitalLogo.svg";
 import personalLogo from "../../Resources/Images/personLogo.svg";
@@ -18,6 +18,8 @@ import {
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {ModalsContext} from "../../Context/ModalsContext";
 import {Doc} from "../../Models/Doc";
+import {APIContext} from "../../Context/APIContext";
+import {AppContext} from "../../Context/AppContext";
 
 interface DocumentElementProps {
     categoryName: string;
@@ -30,12 +32,17 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                                                           }) => {
     const [logo, setLogo] = useState("");
     const [open, setOpen] = React.useState(false);
+    const apiContext = useContext(APIContext);
+    const appContext = useContext(AppContext);
     const anchorRef = React.useRef<HTMLButtonElement>(null);
     const modalsContext = useContext(ModalsContext);
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
     };
-
+    const deleteDocument = async (event: SyntheticEvent) => {
+        await apiContext.deleteDoc(document.id.toString());
+        handleClose(event);
+    }
     const handleClose = (event: Event | React.SyntheticEvent) => {
         if (
             anchorRef.current &&
@@ -76,14 +83,31 @@ export const DocumentElement: FC<DocumentElementProps> = ({
             setLogo(customLogo);
         }
     }, []);
+    const openPdf = () => {
+        var objbuilder = '';
+        objbuilder += ('<object width="100%" height="100%" data="data:application/pdf;base64,');
+        objbuilder += (document.fileData);
+        objbuilder += ('" type="application/pdf" class="internal">');
+        objbuilder += ('<embed src="data:application/pdf;base64,');
+        objbuilder += (document.fileData);
+        objbuilder += ('" type="application/pdf"  />');
+        objbuilder += ('</object>');
 
+        const win = window.open("#", "_blank");
+        const title = "my tab title";
+        win?.document.write('<html><title>' + title + '</title><body style="margin-top:0px; margin - left:0px; margin - right:0px;margin - bottom:0px;">');
+        win?.document.write(objbuilder);
+        win?.document.write('</body></html>');
+
+    }
     return (
         <li className="row col-10">
             <div
                 className="button-Documents"
                 style={{display: "flex", justifyContent: "space-between"}}
+
             >
-                <div style={{display: "flex", marginTop: "5px"}}>
+                <div onClick={() => openPdf()} style={{display: "flex", marginTop: "5px", width: "100%"}}>
                     <img
                         src={logo}
                         alt={"car"}
@@ -136,14 +160,16 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                                             }}
                                         >
                                             <MenuItem
-                                                onClick={() =>
-                                                    modalsContext.setIsEditDocumentModalOpen(true)
+                                                onClick={() => {
+                                                    modalsContext.setIsEditDocumentModalOpen(true);
+                                                    appContext.setEditedDocument(document);
+                                                }
                                                 }
                                             >
                                                 <EditIcon/>
                                                 Edit
                                             </MenuItem>
-                                            <MenuItem onClick={handleClose}>
+                                            <MenuItem onClick={(e: SyntheticEvent) => deleteDocument(e)}>
                                                 <DeleteIcon/>
                                                 Delete
                                             </MenuItem>
@@ -156,5 +182,6 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                 </div>
             </div>
         </li>
-    );
+    )
+        ;
 };

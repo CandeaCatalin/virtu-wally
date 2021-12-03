@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using VirtuWally.Domain;
 
 namespace VirtuWally.Data
@@ -13,6 +14,12 @@ namespace VirtuWally.Data
         public void Remove( int categoryId)
         {
             Category category = _context.Categories.Find(categoryId);
+            var docs = _context.Docs.Where(d => d.CategoryId != categoryId);
+            foreach (var doc in docs)
+            {
+                _context.Docs.Remove(doc);
+            }
+            _context.SaveChanges();
             _context.Categories.Remove(category);
             _context.SaveChanges();
         }

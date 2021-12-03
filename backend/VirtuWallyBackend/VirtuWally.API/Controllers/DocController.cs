@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using VirtuWally.API.Dtos.Document;
 using VirtuWally.API.Services;
 using VirtuWally.Data;
 using System.IO;
+using VirtuWally.Data.Repositories;
 using VirtuWally.Domain;
 
 namespace VirtuWally.API.Controllers
@@ -25,7 +27,22 @@ namespace VirtuWally.API.Controllers
             _jwtService = jwtService;
         }
 
-        [HttpPost("addDocument")]
+        [HttpPost("delete")]
+        public IActionResult DeleteDocument(DeleteDocDto dto)
+        {
+            User user = _jwtService.CheckIfUserIsLogged(_userRepository, Request);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                _docRepository.Remove(dto.DocId);
+                return Ok(_userRepository.GetById(dto.UserId));
+            }
+        }
+
+        [HttpPost("add")]
         public IActionResult AddDocument([FromForm] AddDocumentDto dto)
         {
             User user = _jwtService.CheckIfUserIsLogged(_userRepository, Request);
@@ -53,6 +70,37 @@ namespace VirtuWally.API.Controllers
                     return BadRequest(new { message = "No document added!" });
                 }
 
+                return Ok(_userRepository.GetById(int.Parse(dto.UserId)));
+            }
+        }
+
+        [HttpPost("edit")]
+        public IActionResult EditDocument([FromForm] EditDocumentDto dto)
+        {
+            User user = _jwtService.CheckIfUserIsLogged(_userRepository, Request);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                Doc newDoc = new Doc
+                {
+                    Id = int.Parse(dto.Id),
+                    Name = dto.Name != null ? dto.Name:"",
+                    CategoryId =dto.CategoryId.Length!=0? int.Parse(dto.CategoryId):0,
+                };
+                if (dto.File != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    dto.File.CopyTo(ms);
+                    newDoc.FileData = ms.ToArray();
+                }
+                else
+                {
+                    newDoc.FileData = Array.Empty<byte>();
+                }
+                _docRepository.Edit(newDoc);
                 return Ok(_userRepository.GetById(int.Parse(dto.UserId)));
             }
         }

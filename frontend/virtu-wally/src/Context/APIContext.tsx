@@ -3,7 +3,6 @@ import {User} from "../Models/User";
 import {AppContext} from "./AppContext";
 import {toast} from "react-toastify";
 import {ModalsContext} from "./ModalsContext";
-import {useNavigate} from "react-router-dom";
 
 type APIContextType = {
     login: any;
@@ -14,6 +13,8 @@ type APIContextType = {
     forgetPassword: any;
     forgetPasswordSendMail: any;
     uploadDoc: any;
+    deleteDoc: any;
+    editDoc: any;
 };
 // @ts-ignore
 export const APIContext = createContext<APIContextType>(null);
@@ -21,6 +22,7 @@ export const APIContext = createContext<APIContextType>(null);
 export const APIProvider: FC = ({children}) => {
     const appContext = useContext(AppContext);
     const modalsContext = useContext(ModalsContext);
+    const formData = new FormData();
     const login = async (email: string, password: string) => {
         const response = await fetch("/api/Authentication/login", {
             method: "POST",
@@ -142,7 +144,7 @@ export const APIProvider: FC = ({children}) => {
         }
     };
     const uploadImage = async (file: any) => {
-        const formData = new FormData();
+
         formData.append("file", file);
         const response = await fetch("/api/user/UploadImage", {
             method: "POST",
@@ -160,7 +162,7 @@ export const APIProvider: FC = ({children}) => {
                 credentials: "include",
                 body: JSON.stringify({email, userId, password}),
             });
-            const content = await response.json();
+
             appContext.changePage("Login");
             toast.success("Password changed!", {
                 position: "top-right",
@@ -211,7 +213,7 @@ export const APIProvider: FC = ({children}) => {
             formData.append("CategoryId", selectedCategory);
             formData.append("UserId", appContext.user.id.toString());
             formData.append("Name", docName);
-            const response = await fetch('/api/Doc/AddDocument', {
+            const response = await fetch('/api/Doc/Add', {
                 method: 'POST',
                 body: formData
             })
@@ -251,6 +253,64 @@ export const APIProvider: FC = ({children}) => {
             });
         }
     }
+    const deleteDoc = async (docId: number) => {
+        const userId = appContext.user.id.toString();
+        const response = await fetch('/api/Doc/delete', {
+            method: 'POST',
+            headers: {"Content-Type": "application/json",},
+            body: JSON.stringify({docId, userId}),
+        })
+        const content = await response.json();
+        appContext.setUser(content);
+        toast.success("Document deleted!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    const editDoc = async (file: any, selectedCategory: string, docName: string, docId: string) => {
+
+        if (file?.type === 'application/pdf' || file === undefined) {
+            formData.append("File", file);
+            formData.append("CategoryId", selectedCategory);
+            formData.append("UserId", appContext.user.id.toString());
+            formData.append("Name", docName);
+            formData.append("Id", docId);
+            const response = await fetch('/api/Doc/edit', {
+                method: 'POST',
+                body: formData
+            })
+            const content = await response.json();
+
+            if (content.message !== undefined) {
+                toast.error(content.message, {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            } else {
+                appContext.setUser(content);
+                modalsContext.setIsEditDocumentModalOpen(false);
+                toast.success("Document edited!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            }
+        }
+    }
     const ctx: APIContextType = {
             login: (email: string, password: string) => login(email, password),
             register: (user: User, password: string, confirmPassword: string) =>
@@ -269,6 +329,8 @@ export const APIProvider: FC = ({children}) => {
             forgetPasswordSendMail: (email: string) => forgetPasswordSendMail(email),
             uploadDoc: (file: any, selectedCategory: string, docName: string) =>
                 uploadDoc(file, selectedCategory, docName),
+            deleteDoc: (docId: number) => deleteDoc(docId),
+            editDoc: (file: any, selectedCategory: string, docName: string, docId: string) => editDoc(file, selectedCategory, docName, docId)
         }
     ;
     return <APIContext.Provider value={ctx}>{children}</APIContext.Provider>;

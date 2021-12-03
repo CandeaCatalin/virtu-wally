@@ -60,7 +60,7 @@ namespace VirtuWally.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getdate()");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -133,9 +133,7 @@ namespace VirtuWally.Data.Migrations
 
                     b.HasOne("VirtuWally.Domain.User", null)
                         .WithMany("Docs")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Category");
                 });

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using VirtuWally.API.Services;
 using VirtuWally.Data;
+using VirtuWally.Data.Repositories;
 
 namespace VirtuWally.API
 {
@@ -36,6 +37,7 @@ namespace VirtuWally.API
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IDocRepository, DocRepository>();
             services.AddScoped<JwtService>();
         }
 

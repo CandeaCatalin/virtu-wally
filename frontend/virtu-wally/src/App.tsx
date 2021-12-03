@@ -5,7 +5,7 @@ import { AppProvider } from "./Context/AppContext";
 import { APIProvider } from "./Context/APIContext";
 import { ModalsProvider } from "./Context/ModalsContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ForgetPassword } from "./Pages/ForgetPassword";
+import {ForgetPassword} from "./Pages/ForgetPassword";
 
 function App() {
   return (

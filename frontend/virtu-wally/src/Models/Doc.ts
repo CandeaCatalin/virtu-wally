@@ -1,6 +1,9 @@
+import { Category } from "./Category";
+
 export type Doc = {
-    Name: string;
+    name: string;
     userId: number;
-    UploadedDate: Date;
-    CategoryId: number;
+    uploadedDate: Date;
+    category: Category;
+    categoryId: number;
 }

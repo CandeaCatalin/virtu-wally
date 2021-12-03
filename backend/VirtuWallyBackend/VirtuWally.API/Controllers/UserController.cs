@@ -54,12 +54,14 @@ namespace VirtuWally.API.Controllers
                 }
                 else
                 {
-                    return BadRequest(new {message = "no file"});
+                    return BadRequest(new { message = "no file" });
                 }
 
                 return Ok(user);
             }
-        }[HttpPost("settings")]
+        }
+
+        [HttpPost("settings")]
         public IActionResult UpdateUser(UpdateDto dto)
         {
             try
@@ -69,22 +71,24 @@ namespace VirtuWally.API.Controllers
                 {
                     throw new ArgumentException("Invalid password");
                 }
+
                 User user = new User
                 {
                     Id = dto.Id,
                     FirstName = dto.FirstName,
                     LastName = dto.LastName,
                     Email = dto.Email,
-                    HashPassword = !string.IsNullOrEmpty(dto.NewPassword)? BCrypt.Net.BCrypt.HashPassword(dto.NewPassword):""
+                    HashPassword = !string.IsNullOrEmpty(dto.NewPassword)
+                        ? BCrypt.Net.BCrypt.HashPassword(dto.NewPassword)
+                        : ""
                 };
-                User updatedUser = _repository.UpdateSettings(user,dto.NewPassword);
+                User updatedUser = _repository.UpdateSettings(user, dto.NewPassword);
                 return Ok(updatedUser);
             }
             catch (Exception ex)
             {
                 return Ok(new { message = ex.Message });
             }
-
         }
     }
 }

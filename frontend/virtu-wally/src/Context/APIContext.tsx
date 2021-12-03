@@ -3,6 +3,7 @@ import {User} from "../Models/User";
 import {AppContext} from "./AppContext";
 import {toast} from "react-toastify";
 import {ModalsContext} from "./ModalsContext";
+import {useNavigate} from "react-router-dom";
 
 type APIContextType = {
     login: any;
@@ -12,6 +13,7 @@ type APIContextType = {
     uploadImage: any;
     forgetPassword: any;
     forgetPasswordSendMail: any;
+    uploadDoc: any;
 };
 // @ts-ignore
 export const APIContext = createContext<APIContextType>(null);
@@ -150,10 +152,11 @@ export const APIProvider: FC = ({children}) => {
         appContext.setUser(await response.json());
     };
     const forgetPassword = async (password: string, confirmPassword: string, email: string, userId: number) => {
+        debugger;
         if (password === confirmPassword) {
             const response = await fetch("/api/Authentication/ForgetPassword", {
                 method: "POST",
-                headers: {"Content-Type": "application/json"},
+                headers: {"Content-Type": "application/json", 'Accept': 'application/json'},
                 credentials: "include",
                 body: JSON.stringify({email, userId, password}),
             });
@@ -179,6 +182,7 @@ export const APIProvider: FC = ({children}) => {
                 progress: undefined,
             });
         }
+        return true;
     }
     const forgetPasswordSendMail = async (email: string) => {
         const response = await fetch("/api/Authentication/ForgetPasswordSendEmail", {
@@ -199,22 +203,73 @@ export const APIProvider: FC = ({children}) => {
             progress: undefined,
         });
     }
+    const uploadDoc = async (file: any, selectedCategory: string, docName: string) => {
+
+        const formData = new FormData();
+        if (file?.type === 'application/pdf' && selectedCategory.length !== 0 && docName.length !== 0) {
+            formData.append("File", file);
+            formData.append("CategoryId", selectedCategory);
+            formData.append("UserId", appContext.user.id.toString());
+            formData.append("Name", docName);
+            const response = await fetch('/api/Doc/AddDocument', {
+                method: 'POST',
+                body: formData
+            })
+            const content = await response.json();
+            if (content.message !== undefined) {
+                toast.error(content.message, {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            } else {
+                appContext.setUser(content);
+                modalsContext.setIsAddDocumentModalOpen(false);
+                toast.success("Document added", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            }
+        } else {
+            toast.error("All fields must be filled!", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        }
+    }
     const ctx: APIContextType = {
-        login: (email: string, password: string) => login(email, password),
-        register: (user: User, password: string, confirmPassword: string) =>
-            register(user, password, confirmPassword),
-        signOut: signOut,
-        settings: (
-            user: User,
-            password: string,
-            newPassword: string,
-            confirmPassword: string
-        ) => settings(user, password, newPassword, confirmPassword),
-        uploadImage: (file: any) =>
-            uploadImage(file),
-        forgetPassword: (password: string, confirmPassword: string, email: string, userId: number) =>
-            forgetPassword(password, confirmPassword, email, userId),
-        forgetPasswordSendMail: (email: string) => forgetPasswordSendMail(email)
-    };
+            login: (email: string, password: string) => login(email, password),
+            register: (user: User, password: string, confirmPassword: string) =>
+                register(user, password, confirmPassword),
+            signOut: signOut,
+            settings: (
+                user: User,
+                password: string,
+                newPassword: string,
+                confirmPassword: string
+            ) => settings(user, password, newPassword, confirmPassword),
+            uploadImage: (file: any) =>
+                uploadImage(file),
+            forgetPassword: (password: string, confirmPassword: string, email: string, userId: number) =>
+                forgetPassword(password, confirmPassword, email, userId),
+            forgetPasswordSendMail: (email: string) => forgetPasswordSendMail(email),
+            uploadDoc: (file: any, selectedCategory: string, docName: string) =>
+                uploadDoc(file, selectedCategory, docName),
+        }
+    ;
     return <APIContext.Provider value={ctx}>{children}</APIContext.Provider>;
 };

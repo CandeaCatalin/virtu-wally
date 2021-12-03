@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj": {}
+    "C:\\Projects\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj": {
+    "C:\\Projects\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
+        "projectUniqueName": "C:\\Projects\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
         "projectName": "VirtuWally.Domain",
-        "projectPath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
-        "packagesPath": "C:\\Users\\catalin.candea\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\An 4\\Semestru 1\\MSA\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\obj\\",
+        "projectPath": "C:\\Projects\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\VirtuWally.Domain.csproj",
+        "packagesPath": "C:\\Users\\Catalin.Candea\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\VirtuWally\\backend\\VirtuWallyBackend\\VirtuWally.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\catalin.candea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Catalin.Candea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/access-devops/_packaging/AzureDevOpsArtifacts/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -63,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }

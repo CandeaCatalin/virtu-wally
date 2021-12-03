@@ -10,8 +10,8 @@ using VirtuWally.Data;
 namespace VirtuWally.Data.Migrations
 {
     [DbContext(typeof(VirtuWallyContext))]
-    [Migration("20211201232857_addActivated")]
-    partial class addActivated
+    [Migration("20211203140944_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,6 +50,9 @@ namespace VirtuWally.Data.Migrations
 
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
+
+                    b.Property<byte[]>("FileData")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -128,15 +131,13 @@ namespace VirtuWally.Data.Migrations
                         .WithMany()
                         .HasForeignKey("CategoryId");
 
-                    b.HasOne("VirtuWally.Domain.User", "User")
+                    b.HasOne("VirtuWally.Domain.User", null)
                         .WithMany("Docs")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Category");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("VirtuWally.Domain.User", b =>

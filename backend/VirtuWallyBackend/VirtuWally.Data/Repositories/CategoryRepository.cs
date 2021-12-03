@@ -1,4 +1,5 @@
-﻿using VirtuWally.Domain;
+﻿using System.Linq;
+using VirtuWally.Domain;
 
 namespace VirtuWally.Data
 {
@@ -20,6 +21,11 @@ namespace VirtuWally.Data
         {
             _context.Categories.Add(category);
             _context.SaveChanges();
+        }
+
+        public Category GetById(int categoryId)
+        {
+            return _context.Categories.FirstOrDefault(c => c.Id == categoryId);
         }
     }
 }

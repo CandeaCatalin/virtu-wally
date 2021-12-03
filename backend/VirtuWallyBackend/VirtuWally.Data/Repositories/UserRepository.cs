@@ -59,9 +59,10 @@ namespace VirtuWally.Data
 
         public User GetById(int id)
         {
-            return _context.Users.Include(u => u.Docs).Include(u => u.Categories)
+            return _context.Users.Include(u => u.Docs).ThenInclude(d => d.Category).Include(u => u.Categories)
                 .FirstOrDefault(u => u.Id == id);
-            ;
+
+
         }
 
         public User UpdateImage(User user)
@@ -86,13 +87,13 @@ namespace VirtuWally.Data
             }
 
 
-
             if (!string.IsNullOrEmpty(user.Email))
             {
                 if (new System.Net.Mail.MailAddress(user.Email) == null)
                 {
                     throw new FormatException("Email is invalid");
                 }
+
                 updatedUser.Email = user.Email;
             }
 
@@ -105,6 +106,7 @@ namespace VirtuWally.Data
             _context.SaveChanges();
             return updatedUser;
         }
+
         public void VerifyRegistration(int userId)
         {
             User user = GetById(userId);
@@ -112,6 +114,7 @@ namespace VirtuWally.Data
             _context.Users.Update(user);
             _context.SaveChanges();
         }
+
         bool IsValidEmail(string email)
         {
             if (email.Trim().EndsWith("."))
@@ -129,7 +132,5 @@ namespace VirtuWally.Data
                 return false;
             }
         }
-
-        
     }
 }

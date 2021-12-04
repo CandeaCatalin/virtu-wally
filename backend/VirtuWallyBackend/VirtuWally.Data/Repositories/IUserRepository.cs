@@ -7,7 +7,7 @@ namespace VirtuWally.Data
         User Create(User user);
         User GetByEmail(string email);
         User GetById(int id);
-        User UpdateImage(User user);
+        void UpdateImage(int userId,byte[] image);
         User UpdateSettings(User user, string newPassword);
         void VerifyRegistration(int userId);
     }

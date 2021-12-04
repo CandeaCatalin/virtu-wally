@@ -65,16 +65,17 @@ namespace VirtuWally.Data
 
         }
 
-        public User UpdateImage(User user)
+        public void UpdateImage(int userId, byte[] image)
         {
+            User user = _context.Users.Find(userId);
+            user.ImageUrl = image;
             _context.Users.Update(user);
             _context.SaveChanges();
-            return user;
         }
 
         public User UpdateSettings(User user, string newPassword)
         {
-            User updatedUser = GetById(user.Id);
+            User updatedUser = _context.Users.Find(user.Id);
 
             if (!string.IsNullOrEmpty(user.LastName))
             {
@@ -104,7 +105,7 @@ namespace VirtuWally.Data
 
             _context.Users.Update(updatedUser);
             _context.SaveChanges();
-            return updatedUser;
+            return GetById(updatedUser.Id);
         }
 
         public void VerifyRegistration(int userId)

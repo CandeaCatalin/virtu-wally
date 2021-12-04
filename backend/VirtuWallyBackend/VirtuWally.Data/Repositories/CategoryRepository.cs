@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using VirtuWally.Domain;
 
-namespace VirtuWally.Data
+namespace VirtuWally.Data.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {

@@ -50,14 +50,14 @@ namespace VirtuWally.API.Controllers
                     file.CopyTo(ms);
                     user.ImageUrl = ms.ToArray();
 
-                    _repository.UpdateImage(user);
+                    _repository.UpdateImage(user.Id,user.ImageUrl);
                 }
                 else
                 {
                     return BadRequest(new { message = "no file" });
                 }
 
-                return Ok(user);
+                return Ok(_repository.GetById(user.Id));
             }
         }
 
@@ -82,8 +82,8 @@ namespace VirtuWally.API.Controllers
                         ? BCrypt.Net.BCrypt.HashPassword(dto.NewPassword)
                         : ""
                 };
-                User updatedUser = _repository.UpdateSettings(user, dto.NewPassword);
-                return Ok(updatedUser);
+                _repository.UpdateSettings(user, dto.NewPassword);
+                return Ok(_repository.GetById(user.Id));
             }
             catch (Exception ex)
             {

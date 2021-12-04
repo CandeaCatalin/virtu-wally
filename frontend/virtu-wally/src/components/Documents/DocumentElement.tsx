@@ -82,22 +82,24 @@ export const DocumentElement: FC<DocumentElementProps> = ({
         } else {
             setLogo(customLogo);
         }
-    }, []);
+    }, [categoryName]);
+
     const openPdf = () => {
-        var objbuilder = '';
-        objbuilder += ('<object width="100%" height="100%" data="data:application/pdf;base64,');
-        objbuilder += (document.fileData);
-        objbuilder += ('" type="application/pdf" class="internal">');
-        objbuilder += ('<embed src="data:application/pdf;base64,');
-        objbuilder += (document.fileData);
-        objbuilder += ('" type="application/pdf"  />');
-        objbuilder += ('</object>');
+        let objBuilder = "";
+        objBuilder += ('<object width="100%" height="100%" data="data:application/pdf;base64,');
+        objBuilder += (document.fileData);
+        objBuilder += ('" type="application/pdf" class="internal">');
+        objBuilder += ('<embed src="data:application/pdf;base64,');
+        objBuilder += (document.fileData);
+        objBuilder += ('" type="application/pdf"  />');
+        objBuilder += ('</object>');
 
         const win = window.open("#", "_blank");
-        const title = "my tab title";
+        const title = document.name;
         win?.document.write('<html><title>' + title + '</title><body style="margin-top:0px; margin - left:0px; margin - right:0px;margin - bottom:0px;">');
-        win?.document.write(objbuilder);
+        win?.document.write(objBuilder);
         win?.document.write('</body></html>');
+        objBuilder = "";
 
     }
     return (

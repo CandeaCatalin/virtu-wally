@@ -33,6 +33,7 @@ export const EditDocumentModal: FC<EditDocumentModalProps> = ({onClose}) => {
     const onSubmit = async () => {
         setIsSubmitted(true);
         await apiContext.editDoc(file, selectedCategory.toString(), documentName, appContext.editedDocument.id);
+
         setIsSubmitted(false);
 
     }

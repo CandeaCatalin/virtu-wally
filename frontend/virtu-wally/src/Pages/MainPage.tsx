@@ -9,6 +9,7 @@ import carLogo from "../Resources/Images/car.svg";
 import {DocumentElement} from "../components/Documents/DocumentElement";
 import {Toast} from "../components/Toast";
 import {doc} from "prettier";
+import userEvent from "@testing-library/user-event";
 
 interface MainPageProps {
     visible: boolean;
@@ -17,10 +18,7 @@ interface MainPageProps {
 export const MainPage: FC<MainPageProps> = ({visible}) => {
     const appContext = useContext(AppContext);
     const modalContext = useContext(ModalsContext);
-    const [docs, setDocs] = useState(appContext.user.docs);
-    useEffect(() => {
-        setDocs(appContext.user.docs);
-    }, [appContext.user]);
+
     return (
         <>
             <Toast/>
@@ -39,7 +37,7 @@ export const MainPage: FC<MainPageProps> = ({visible}) => {
                                 className="document-list"
                                 style={{overflowY: "auto", height: "70vh"}}
                             >
-                                {docs.map((Doc, idx) => <DocumentElement
+                                {appContext.user.docs.map((Doc, idx) => <DocumentElement
                                     categoryName={Doc.category.name} document={Doc} key={idx}/>)}
 
                             </ul>

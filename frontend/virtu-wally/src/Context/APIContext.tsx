@@ -151,7 +151,8 @@ export const APIProvider: FC = ({children}) => {
             credentials: "include",
             body: formData,
         });
-        appContext.setUser(await response.json());
+        const content = await response.json();
+        appContext.setUser(content);
     };
     const forgetPassword = async (password: string, confirmPassword: string, email: string, userId: number) => {
         debugger;
@@ -215,6 +216,7 @@ export const APIProvider: FC = ({children}) => {
             formData.append("Name", docName);
             const response = await fetch('/api/Doc/Add', {
                 method: 'POST',
+                credentials: "include",
                 body: formData
             })
             const content = await response.json();
@@ -257,6 +259,7 @@ export const APIProvider: FC = ({children}) => {
         const userId = appContext.user.id.toString();
         const response = await fetch('/api/Doc/delete', {
             method: 'POST',
+            credentials: "include",
             headers: {"Content-Type": "application/json",},
             body: JSON.stringify({docId, userId}),
         })
@@ -282,6 +285,7 @@ export const APIProvider: FC = ({children}) => {
             formData.append("Id", docId);
             const response = await fetch('/api/Doc/edit', {
                 method: 'POST',
+                credentials: "include",
                 body: formData
             })
             const content = await response.json();
@@ -298,6 +302,7 @@ export const APIProvider: FC = ({children}) => {
                 });
             } else {
                 appContext.setUser(content);
+
                 modalsContext.setIsEditDocumentModalOpen(false);
                 toast.success("Document edited!", {
                     position: "top-right",

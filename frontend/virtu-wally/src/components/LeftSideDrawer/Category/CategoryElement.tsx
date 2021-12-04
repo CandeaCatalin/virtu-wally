@@ -25,7 +25,7 @@ export const CategoryElement: FC<CategoryElementProps> = ({
         ) && (
           <a
             onClick={() => openCategoryDeleteModal(Category.id)}
-            style={{ paddingLeft: "8px" }}
+            style={{ paddingLeft: "8px",width:"10px" }}
           >
             <img
               src={minusImage}

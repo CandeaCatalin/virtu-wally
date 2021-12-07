@@ -13,16 +13,18 @@ export const ForgetPassword: FC<ForgetPasswordProps> = ({}) => {
     const {email} = useParams();
     const {userId} = useParams();
     const [password, setPassword] = useState("");
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const [confirmPassword, setConfirmPassword] = useState("");
     const apiContext = useContext(APIContext);
     const navigate = useNavigate();
     const onSubmit = async (e: SyntheticEvent) => {
         e.preventDefault();
-
+        setIsSubmitted(true);
         const result = await apiContext.forgetPassword(password, confirmPassword, email, userId);
         if (result) {
             navigate('../', {replace: true});
         }
+        setIsSubmitted(false);
 
     }
     return (<><Toast/>
@@ -72,7 +74,7 @@ export const ForgetPassword: FC<ForgetPasswordProps> = ({}) => {
                         <button
                             className="button-login w-100 btn btn-lg mt-3"
                             type="submit"
-
+                            disabled={isSubmitted}
                         >
                             Submit
                         </button>

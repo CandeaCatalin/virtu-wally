@@ -20,6 +20,7 @@ export const AddDocumentModal: FC<AddDocumentModalProps> = ({onClose}) => {
         const modalsContext = useContext(ModalsContext);
         const [selectedCategory, setSelectedCategory] = useState('');
         const [file, setFile] = useState<File>();
+        const [isSubmitted, setIsSubmitted] = useState(false);
         const [documentName, setDocumentName] = useState("");
         const ITEM_HEIGHT = 48;
         const ITEM_PADDING_TOP = 8;
@@ -33,7 +34,9 @@ export const AddDocumentModal: FC<AddDocumentModalProps> = ({onClose}) => {
         };
 
         const onSubmit = async () => {
+            setIsSubmitted(true);
             await apiContext.uploadDoc(file, selectedCategory, documentName);
+            setIsSubmitted(false);
         }
         return (
             <>
@@ -86,9 +89,7 @@ export const AddDocumentModal: FC<AddDocumentModalProps> = ({onClose}) => {
                                                 input={<OutlinedInput label="Name"/>}
                                                 MenuProps={MenuProps}
                                             >
-                                                <MenuItem value="">
-                                                    <em>None</em>
-                                                </MenuItem>
+
                                                 {appContext.user.categories.map((category, idx) => (
                                                     <MenuItem value={category.id} key={idx}>{category.name}</MenuItem>
                                                 ))}
@@ -118,6 +119,7 @@ export const AddDocumentModal: FC<AddDocumentModalProps> = ({onClose}) => {
                                     type="button"
                                     className="btn button-modal-prim"
                                     onClick={onSubmit}
+                                    disabled={isSubmitted}
                                 >
                                     Add
                                 </button>

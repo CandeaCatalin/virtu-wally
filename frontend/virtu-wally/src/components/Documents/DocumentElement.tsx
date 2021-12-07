@@ -32,6 +32,7 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                                                           }) => {
     const [logo, setLogo] = useState("");
     const [open, setOpen] = React.useState(false);
+    const [isDeleting, setIsDeleting] = useState(false);
     const apiContext = useContext(APIContext);
     const appContext = useContext(AppContext);
     const anchorRef = React.useRef<HTMLButtonElement>(null);
@@ -40,8 +41,12 @@ export const DocumentElement: FC<DocumentElementProps> = ({
         setOpen((prevOpen) => !prevOpen);
     };
     const deleteDocument = async (event: SyntheticEvent) => {
-        await apiContext.deleteDoc(document.id.toString());
-        handleClose(event);
+        if (!isDeleting) {
+            setIsDeleting(true);
+            await apiContext.deleteDoc(document.id.toString());
+            handleClose(event);
+            setIsDeleting(false);
+        }
     }
     const handleClose = (event: Event | React.SyntheticEvent) => {
         if (

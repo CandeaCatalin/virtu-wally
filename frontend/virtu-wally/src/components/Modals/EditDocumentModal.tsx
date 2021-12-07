@@ -90,9 +90,7 @@ export const EditDocumentModal: FC<EditDocumentModalProps> = ({onClose}) => {
                                             input={<OutlinedInput label="Name"/>}
                                             MenuProps={MenuProps}
                                         >
-                                            <MenuItem value="">
-                                                <em>None</em>
-                                            </MenuItem>
+                                            
                                             {appContext.user.categories.map((category, idx) => (
                                                 <MenuItem value={category.id} key={idx}>{category.name}</MenuItem>
                                             ))}

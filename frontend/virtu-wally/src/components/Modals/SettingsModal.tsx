@@ -14,6 +14,8 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
   const appContext = useContext(AppContext);
   const modalsContext = useContext(ModalsContext);
   const apiContext = useContext(APIContext);
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [newUser, setNewUser] = useState<User>({
     createdTime: new Date(),
     docs: [],
@@ -28,6 +30,7 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const onSubmit = async () => {
+    setIsSubmitted(true);
     newUser.id = appContext.user.id;
     await apiContext.settings(
       newUser,
@@ -35,6 +38,7 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
       newPassword,
       confirmPassword
     );
+    setIsSubmitted(false);
   };
 
   return (
@@ -180,6 +184,7 @@ export const SettingsModal: FC<SettingsModalProps> = ({ onClose }) => {
               type="button"
               className="btn button-modal-prim"
               onClick={onSubmit}
+              disabled={isSubmitted}
             >
               Submit
             </button>

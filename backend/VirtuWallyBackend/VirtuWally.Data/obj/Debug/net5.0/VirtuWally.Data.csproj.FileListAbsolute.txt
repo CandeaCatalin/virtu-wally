@@ -1,3 +1,21 @@
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.deps.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.runtimeconfig.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.runtimeconfig.dev.json
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\ref\VirtuWally.Data.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Domain.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Domain.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.csproj.AssemblyReference.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.AssemblyInfoInputs.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.AssemblyInfo.cs
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.csproj.CoreCompileInputs.cache
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.csproj.CopyComplete
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\ref\VirtuWally.Data.dll
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.pdb
+C:\Projects\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\obj\Debug\net5.0\VirtuWally.Data.genruntimeconfig.cache
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.deps.json
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.runtimeconfig.json
 D:\Facultate\An 4\Semestru 1\MSA\VirtuWally\backend\VirtuWallyBackend\VirtuWally.Data\bin\Debug\net5.0\VirtuWally.Data.runtimeconfig.dev.json

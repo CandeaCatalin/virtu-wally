@@ -21,25 +21,36 @@ namespace VirtuWally.Data.Migrations
 
             modelBuilder.Entity("VirtuWally.Domain.Category", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("VirtuWally.Domain.Doc", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CategoryId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("FileData")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -49,8 +60,8 @@ namespace VirtuWally.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getdate()");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -63,9 +74,10 @@ namespace VirtuWally.Data.Migrations
 
             modelBuilder.Entity("VirtuWally.Domain.User", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnAdd()
@@ -73,44 +85,63 @@ namespace VirtuWally.Data.Migrations
                         .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HashPassword")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("ImageUrl")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<bool>("IsActivated")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("VirtuWally.Domain.Category", b =>
+                {
+                    b.HasOne("VirtuWally.Domain.User", null)
+                        .WithMany("Categories")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("VirtuWally.Domain.Doc", b =>
                 {
                     b.HasOne("VirtuWally.Domain.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("CategoryId");
-
-                    b.HasOne("VirtuWally.Domain.User", "User")
-                        .WithMany("Docs")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.HasOne("VirtuWally.Domain.User", null)
+                        .WithMany("Docs")
+                        .HasForeignKey("UserId");
 
-                    b.Navigation("User");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("VirtuWally.Domain.User", b =>
                 {
+                    b.Navigation("Categories");
+
                     b.Navigation("Docs");
                 });
 #pragma warning restore 612, 618

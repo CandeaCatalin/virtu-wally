@@ -1,39 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import { LoginPage, MainPage, RegisterPage } from "./Pages";
-
-enum MenuItems {
-  Main = "Main",
-  Login = "Login",
-  Register = "Register",
-}
+import { Main } from "./Main";
+import { AppProvider } from "./Context/AppContext";
+import { APIProvider } from "./Context/APIContext";
+import { ModalsProvider } from "./Context/ModalsContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {ForgetPassword} from "./Pages/ForgetPassword";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("Main");
-  const changePage = (newPage: string) => {
-    setSelectedPage(newPage);
-  };
   return (
-    <div>
-      {selectedPage === MenuItems.Main && (
-        <MainPage
-          visible={selectedPage === MenuItems.Main}
-          changePage={changePage}
-        />
-      )}
-      {selectedPage === MenuItems.Login && (
-        <LoginPage
-          visible={selectedPage === MenuItems.Login}
-          changePage={changePage}
-        />
-      )}
-      {selectedPage === MenuItems.Register && (
-        <RegisterPage
-          visible={selectedPage === MenuItems.Register}
-          changePage={changePage}
-        />
-      )}
-    </div>
+    <BrowserRouter>
+      <AppProvider>
+        <ModalsProvider>
+          <APIProvider>
+            <Routes>
+              <Route path="/" element={<Main />} />
+
+              <Route path="/ForgetPassword/:email/:userId" element = {<ForgetPassword/>}/>
+            </Routes>
+          </APIProvider>
+        </ModalsProvider>
+      </AppProvider>
+    </BrowserRouter>
   );
 }
 

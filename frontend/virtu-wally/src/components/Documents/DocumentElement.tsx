@@ -89,22 +89,23 @@ export const DocumentElement: FC<DocumentElementProps> = ({
         }
     }, [categoryName]);
 
-    const openPdf = () => {
-        let objBuilder = "";
-        objBuilder += ('<object width="100%" height="100%" data="data:application/pdf;base64,');
-        objBuilder += (document.fileData);
-        objBuilder += ('" type="application/pdf" class="internal">');
-        objBuilder += ('<embed src="data:application/pdf;base64,');
-        objBuilder += (document.fileData);
-        objBuilder += ('" type="application/pdf"  />');
-        objBuilder += ('</object>');
 
-        const win = window.open("#", "_blank");
-        const title = document.name;
-        win?.document.write('<html><title>' + title + '</title><body style="margin-top:0px; margin - left:0px; margin - right:0px;margin - bottom:0px;">');
-        win?.document.write(objBuilder);
-        win?.document.write('</body></html>');
-        objBuilder = "";
+    function base64ToArrayBuffer() {
+        const binaryString = window.atob(document.fileData);
+        const binaryLen = binaryString.length;
+        const bytes = new Uint8Array(binaryLen);
+        for (let i = 0; i < binaryLen; i++) {
+            const ascii = binaryString.charCodeAt(i);
+            bytes[i] = ascii;
+        }
+        return bytes;
+    }
+
+    const downloadPDF = (byte: any) => {
+        const blob = new Blob([byte], {
+            type: "application/pdf"
+        });
+        return window.URL.createObjectURL(blob);
 
     }
     return (
@@ -114,19 +115,21 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                 style={{display: "flex", justifyContent: "space-between"}}
 
             >
-                <div onClick={() => openPdf()} style={{display: "flex", marginTop: "5px", width: "100%"}}>
-                    <img
-                        src={logo}
-                        alt={"car"}
-                        height={"20px"}
-                        style={{
-                            marginTop: "3px",
-                            marginRight: "10px",
-                            marginLeft: "10px",
-                        }}
-                    />{" "}
-                    <div style={{color: "black"}}> {document.name}</div>
-                </div>
+                <a href={downloadPDF(base64ToArrayBuffer())} download={document.name}>
+                    <div style={{display: "flex", marginTop: "5px", width: "100%"}}>
+                        <img
+                            src={logo}
+                            alt={"car"}
+                            height={"20px"}
+                            style={{
+                                marginTop: "3px",
+                                marginRight: "10px",
+                                marginLeft: "10px",
+                            }}
+                        />{" "}
+                        <div style={{color: "black"}}> {document.name}</div>
+                    </div>
+                </a>
                 <div>
                     <Button
                         ref={anchorRef}

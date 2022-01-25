@@ -20,7 +20,6 @@ export const ForgetPasswordPage: FC<ForgetPasswordPageProps> = ({
         e.preventDefault();
         setIsSubmitted(true);
         apiContext.forgetPasswordSendMail(email);
-        setIsSubmitted(false);
     };
     return (
         <>

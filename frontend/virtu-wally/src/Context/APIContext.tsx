@@ -62,15 +62,6 @@ export const APIProvider: FC = ({children}) => {
             const content = await response.json();
             if (content.message === undefined) {
                 appContext.changePage("Login");
-                toast.success("Account registered! Please activate your account.", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
             } else {
                 toast.error(content.message, {
                     position: "top-right",
@@ -81,6 +72,7 @@ export const APIProvider: FC = ({children}) => {
                     draggable: true,
                     progress: undefined,
                 });
+
             }
         } else {
             toast.error("Passwords must match!", {

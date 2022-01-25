@@ -115,7 +115,7 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                 style={{display: "flex", justifyContent: "space-between"}}
 
             >
-                <a href={downloadPDF(base64ToArrayBuffer())} download={document.name}>
+                <a href={downloadPDF(base64ToArrayBuffer())} style={{width: "100%"}} download={document.name}>
                     <div style={{display: "flex", marginTop: "5px", width: "100%"}}>
                         <img
                             src={logo}
@@ -126,7 +126,7 @@ export const DocumentElement: FC<DocumentElementProps> = ({
                                 marginRight: "10px",
                                 marginLeft: "10px",
                             }}
-                        />{" "}
+                        />
                         <div style={{color: "black"}}> {document.name}</div>
                     </div>
                 </a>

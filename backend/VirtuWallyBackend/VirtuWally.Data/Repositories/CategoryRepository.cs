@@ -13,7 +13,7 @@ namespace VirtuWally.Data.Repositories
         public void Remove( int categoryId)
         {
             Category category = _context.Categories.Find(categoryId);
-            var docs = _context.Docs.Where(d => d.CategoryId != categoryId);
+            var docs = _context.Docs.Where(d => d.CategoryId == categoryId);
             foreach (var doc in docs)
             {
                 _context.Docs.Remove(doc);

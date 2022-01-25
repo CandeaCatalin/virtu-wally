@@ -53,7 +53,7 @@ namespace VirtuWally.Data
 
         public User GetByEmail(string email)
         {
-            return _context.Users.Include(u => u.Docs).Include(u => u.Categories)
+            return _context.Users.Include(u => u.Docs).ThenInclude(d => d.Category).Include(u => u.Categories)
                 .FirstOrDefault(u => u.Email == email.ToLower());
         }
 
